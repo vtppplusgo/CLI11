@@ -5,6 +5,7 @@ var searchData=
   ['ignore_5funderscore',['ignore_underscore',['../class_c_l_i_1_1_app.html#aed1c005724aa987ef6d9a375ec90c6ed',1,'CLI::App::ignore_underscore()'],['../class_c_l_i_1_1_option_defaults.html#a9e9c1ed1173afbf09baf6b0d67403310',1,'CLI::OptionDefaults::ignore_underscore()'],['../class_c_l_i_1_1_option.html#aefcd141abec14c6d6ebac24f749c3e6b',1,'CLI::Option::ignore_underscore()']]],
   ['ignore_5funderscore_5f',['ignore_underscore_',['../class_c_l_i_1_1_app.html#a632f10cfa5ee5894a67011f7a6097728',1,'CLI::App::ignore_underscore_()'],['../class_c_l_i_1_1_option_base.html#adafc24528125977c500b9b0c7b5068bf',1,'CLI::OptionBase::ignore_underscore_()']]],
   ['incorrectconstruction',['IncorrectConstruction',['../class_c_l_i_1_1_incorrect_construction.html',1,'CLI']]],
+  ['increment_5fparsed',['increment_parsed',['../class_c_l_i_1_1_app.html#ae8d614e3f5c703216da768dd85d98d8f',1,'CLI::App']]],
   ['introduction',['Introduction',['../index.html',1,'']]],
   ['invaliderror',['InvalidError',['../class_c_l_i_1_1_invalid_error.html',1,'CLI']]],
   ['ipv4validator',['IPV4Validator',['../struct_c_l_i_1_1detail_1_1_i_p_v4_validator.html',1,'CLI::detail']]],

@@ -16,6 +16,7 @@ var searchData=
   ['get_5fexcludes',['get_excludes',['../class_c_l_i_1_1_option.html#aef5d368ea4ff9b5c3058ee316da00bcc',1,'CLI::Option']]],
   ['get_5fexpected',['get_expected',['../class_c_l_i_1_1_option.html#a307543e6e4ddeb6e4ea00438b5b10be3',1,'CLI::Option']]],
   ['get_5ffallthrough',['get_fallthrough',['../class_c_l_i_1_1_app.html#ab89a4979a6e0ea340188f28556136a6b',1,'CLI::App']]],
+  ['get_5ffnames',['get_fnames',['../class_c_l_i_1_1_option.html#a6b4b528c3b0160a7dacc1238625f1741',1,'CLI::Option']]],
   ['get_5ffooter',['get_footer',['../class_c_l_i_1_1_app.html#ad1a6871e4384311fae85e5e03fdcd3fa',1,'CLI::App']]],
   ['get_5fformatter',['get_formatter',['../class_c_l_i_1_1_app.html#a342b67dba58e624e7e5aad2274ad53a3',1,'CLI::App']]],
   ['get_5fgroup',['get_group',['../class_c_l_i_1_1_app.html#aa109e6eeffd6ac72c1ec7e5c9c234f21',1,'CLI::App::get_group()'],['../class_c_l_i_1_1_option_base.html#a341e7df4c2693312609186f036dd923c',1,'CLI::OptionBase::get_group()']]],

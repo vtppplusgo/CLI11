@@ -13,7 +13,7 @@ var searchData=
   ['pname_5f',['pname_',['../class_c_l_i_1_1_option.html#a3599a92dde17b22551dcdfcb9798f0f3',1,'CLI::Option']]],
   ['positionals_5fat_5fend',['positionals_at_end',['../class_c_l_i_1_1_app.html#af536e72074301adc697fd8f06cd7d6f5',1,'CLI::App']]],
   ['positionals_5fat_5fend_5f',['positionals_at_end_',['../class_c_l_i_1_1_app.html#a963ce3e24f0652591e5c751083a57670',1,'CLI::App']]],
-  ['positivenumber',['PositiveNumber',['../struct_c_l_i_1_1detail_1_1_positive_number.html',1,'CLI::detail']]],
+  ['positivenumber',['PositiveNumber',['../class_c_l_i_1_1detail_1_1_positive_number.html',1,'CLI::detail']]],
   ['pre_5fcallback',['pre_callback',['../class_c_l_i_1_1_app.html#a5d74be8e210e779874584a3336aaf506',1,'CLI::App']]],
   ['prefix_5fcommand',['prefix_command',['../class_c_l_i_1_1_app.html#ab8c668b5d28db6faed5716ab8feeb6ad',1,'CLI::App']]],
   ['prefix_5fcommand_5f',['prefix_command_',['../class_c_l_i_1_1_app.html#ad9ad6cc617a88525ee966a7d49c6331e',1,'CLI::App']]]

@@ -94,6 +94,10 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_formatter_lambda.html#aca398f0ed80cb70f742ffaf48355e42c">FormatterLambda</a> (funct_t funct)</td></tr>
 <tr class="memdesc:aca398f0ed80cb70f742ffaf48355e42c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="class_c_l_i_1_1_formatter_lambda.html" title="This is a specialty override for lambda functions.">FormatterLambda</a> with a lambda function. <br /></td></tr>
 <tr class="separator:aca398f0ed80cb70f742ffaf48355e42c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8bb1862cb970b170e95b11db08d6d83"><td class="memItemLeft" align="right" valign="top"><a id="ab8bb1862cb970b170e95b11db08d6d83"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_formatter_lambda.html#ab8bb1862cb970b170e95b11db08d6d83">~FormatterLambda</a> () noexcept override</td></tr>
+<tr class="memdesc:ab8bb1862cb970b170e95b11db08d6d83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adding a destructor (mostly to make GCC 4.7 happy) <br /></td></tr>
+<tr class="separator:ab8bb1862cb970b170e95b11db08d6d83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5eca71447c56251c67b97187e4a888e6"><td class="memItemLeft" align="right" valign="top"><a id="a5eca71447c56251c67b97187e4a888e6"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_formatter_lambda.html#a5eca71447c56251c67b97187e4a888e6">make_help</a> (const <a class="el" href="class_c_l_i_1_1_app.html">App</a> *app, std::string name, AppFormatMode mode) const override</td></tr>
 <tr class="memdesc:a5eca71447c56251c67b97187e4a888e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">This will simply call the lambda function. <br /></td></tr>
@@ -108,9 +112,10 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="memitem:a5552e960c2f477a570ee67541e15e8ea inherit pub_methods_class_c_l_i_1_1_formatter_base"><td class="memItemLeft" align="right" valign="top"><a id="a5552e960c2f477a570ee67541e15e8ea"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>FormatterBase</b> (<a class="el" href="class_c_l_i_1_1_formatter_base.html">FormatterBase</a> &amp;&amp;)=default</td></tr>
 <tr class="separator:a5552e960c2f477a570ee67541e15e8ea inherit pub_methods_class_c_l_i_1_1_formatter_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac439642ac770f97692f31732876db87e inherit pub_methods_class_c_l_i_1_1_formatter_base"><td class="memItemLeft" align="right" valign="top"><a id="ac439642ac770f97692f31732876db87e"></a>
-virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~FormatterBase</b> ()=default</td></tr>
-<tr class="separator:ac439642ac770f97692f31732876db87e inherit pub_methods_class_c_l_i_1_1_formatter_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac634fe340a7679a3f4add85c969e4d98 inherit pub_methods_class_c_l_i_1_1_formatter_base"><td class="memItemLeft" align="right" valign="top"><a id="ac634fe340a7679a3f4add85c969e4d98"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_formatter_base.html#ac634fe340a7679a3f4add85c969e4d98">~FormatterBase</a> () noexcept</td></tr>
+<tr class="memdesc:ac634fe340a7679a3f4add85c969e4d98 inherit pub_methods_class_c_l_i_1_1_formatter_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adding a destructor in this form to work around bug in GCC 4.7. <br /></td></tr>
+<tr class="separator:ac634fe340a7679a3f4add85c969e4d98 inherit pub_methods_class_c_l_i_1_1_formatter_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73a17d81d04f5ee02a2cab32a59a8551 inherit pub_methods_class_c_l_i_1_1_formatter_base"><td class="memItemLeft" align="right" valign="top"><a id="a73a17d81d04f5ee02a2cab32a59a8551"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_formatter_base.html#a73a17d81d04f5ee02a2cab32a59a8551">label</a> (std::string key, std::string val)</td></tr>
 <tr class="memdesc:a73a17d81d04f5ee02a2cab32a59a8551 inherit pub_methods_class_c_l_i_1_1_formatter_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the "REQUIRED" label. <br /></td></tr>

@@ -5,5 +5,5 @@ var searchData=
   ['fnames_5f',['fnames_',['../class_c_l_i_1_1_option.html#a56635c9d01c0fde66df3a5edf87b8a31',1,'CLI::Option']]],
   ['footer_5f',['footer_',['../class_c_l_i_1_1_app.html#a4fbf8b55a33e24d4c5a0532568dd7302',1,'CLI::App']]],
   ['formatter_5f',['formatter_',['../class_c_l_i_1_1_app.html#af55e852ed6e916b2b0182f46d6daabfc',1,'CLI::App']]],
-  ['func',['func',['../struct_c_l_i_1_1_validator.html#a1ba06930fa3560e8da7607ff7aed3cef',1,'CLI::Validator']]]
+  ['func',['func',['../class_c_l_i_1_1_validator.html#aabc72f2f4b249fc08671e3e6c70af51c',1,'CLI::Validator']]]
 ];

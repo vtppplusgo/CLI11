@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['range',['Range',['../struct_c_l_i_1_1_range.html',1,'CLI::Range'],['../struct_c_l_i_1_1_range.html#acdc2184cbc527fed68c9500c6aae15be',1,'CLI::Range::Range(T min, T max)'],['../struct_c_l_i_1_1_range.html#a83d910e7a9faf8e73af6f8a8fd70bf69',1,'CLI::Range::Range(T max)']]],
+  ['range',['Range',['../class_c_l_i_1_1_range.html',1,'CLI::Range'],['../class_c_l_i_1_1_range.html#acdc2184cbc527fed68c9500c6aae15be',1,'CLI::Range::Range(T min, T max)'],['../class_c_l_i_1_1_range.html#a83d910e7a9faf8e73af6f8a8fd70bf69',1,'CLI::Range::Range(T max)']]],
   ['remaining',['remaining',['../class_c_l_i_1_1_app.html#a0474d71afa5672f645d2b645723c9818',1,'CLI::App']]],
   ['remaining_5fsize',['remaining_size',['../class_c_l_i_1_1_app.html#a32adb7bd2643ff7e293802210516ca95',1,'CLI::App']]],
   ['remove_5fexcludes',['remove_excludes',['../class_c_l_i_1_1_option.html#a414e6a8f76443036a9fb096f49165660',1,'CLI::Option']]],

@@ -107,14 +107,17 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_option.html#af75c26433baa09c7c762bfb9eb466215">expected</a> (int value)</td></tr>
 <tr class="memdesc:af75c26433baa09c7c762bfb9eb466215"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the number of expected arguments (Flags don't use this) <br /></td></tr>
 <tr class="separator:af75c26433baa09c7c762bfb9eb466215"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3382914905c3616614ce32e17f688d7"><td class="memItemLeft" align="right" valign="top"><a id="ad3382914905c3616614ce32e17f688d7"></a>
-<a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_option.html#ad3382914905c3616614ce32e17f688d7">check</a> (const <a class="el" href="class_c_l_i_1_1_validator.html">Validator</a> &amp;validator)</td></tr>
-<tr class="memdesc:ad3382914905c3616614ce32e17f688d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a validator with a built in type name. <br /></td></tr>
+<tr class="memitem:ad3382914905c3616614ce32e17f688d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_option.html#ad3382914905c3616614ce32e17f688d7">check</a> (const <a class="el" href="class_c_l_i_1_1_validator.html">Validator</a> &amp;validator)</td></tr>
+<tr class="memdesc:ad3382914905c3616614ce32e17f688d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a validator with a built in type name.  <a href="#ad3382914905c3616614ce32e17f688d7">More...</a><br /></td></tr>
 <tr class="separator:ad3382914905c3616614ce32e17f688d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7efde87e06843425c957e706223c5d5"><td class="memItemLeft" align="right" valign="top"><a id="ab7efde87e06843425c957e706223c5d5"></a>
 <a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_option.html#ab7efde87e06843425c957e706223c5d5">check</a> (std::function&lt; std::string(const std::string &amp;)&gt; validator)</td></tr>
 <tr class="memdesc:ab7efde87e06843425c957e706223c5d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a validator. Takes a const string&amp; and returns an error message (empty if conversion/check is okay). <br /></td></tr>
 <tr class="separator:ab7efde87e06843425c957e706223c5d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55bf2ac860145983d7046f759ad23e14"><td class="memItemLeft" align="right" valign="top"><a id="a55bf2ac860145983d7046f759ad23e14"></a>
+<a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_option.html#a55bf2ac860145983d7046f759ad23e14">transform</a> (const <a class="el" href="class_c_l_i_1_1_validator.html">Validator</a> &amp;validator)</td></tr>
+<tr class="memdesc:a55bf2ac860145983d7046f759ad23e14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a transforming validator with a built in type name. <br /></td></tr>
+<tr class="separator:a55bf2ac860145983d7046f759ad23e14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec424ae8d4baed3d0195bd9cbc521554"><td class="memItemLeft" align="right" valign="top"><a id="aec424ae8d4baed3d0195bd9cbc521554"></a>
 <a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_option.html#aec424ae8d4baed3d0195bd9cbc521554">transform</a> (std::function&lt; std::string(std::string)&gt; func)</td></tr>
 <tr class="memdesc:aec424ae8d4baed3d0195bd9cbc521554"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a validator-like function that can change result. <br /></td></tr>
@@ -481,6 +484,35 @@ MultiOptionPolicy&#160;</td><td class="memItemRight" valign="bottom"><a class="e
 <tr class="separator:a2c5483d3c992baad97beed3de2b82b05 inherit pro_attribs_class_c_l_i_1_1_option_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad3382914905c3616614ce32e17f688d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3382914905c3616614ce32e17f688d7">&#9670;&nbsp;</a></span>check()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_l_i_1_1_option.html">Option</a>* CLI::Option::check </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_c_l_i_1_1_validator.html">Validator</a> &amp;&#160;</td>
+          <td class="paramname"><em>validator</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds a validator with a built in type name. </p>
+<p>Throw away changes to the string value </p>
+
+</div>
+</div>
 <a id="afe31a608506cbe75d40d6cced342be11"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afe31a608506cbe75d40d6cced342be11">&#9670;&nbsp;</a></span>get_items_expected()</h2>
 

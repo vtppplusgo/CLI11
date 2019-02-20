@@ -102,13 +102,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a97241be1f8ac1c8d2fabdcf2ec761f49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e4e7670d82455a43c0d3f8c9cc1db4f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_validator.html#a3e4e7670d82455a43c0d3f8c9cc1db4f">operator()</a> (const std::string &amp;str) const</td></tr>
 <tr class="separator:a3e4e7670d82455a43c0d3f8c9cc1db4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5f66f889d8e006edbad1a58a7e608a3"><td class="memItemLeft" align="right" valign="top"><a id="ae5f66f889d8e006edbad1a58a7e608a3"></a>
-<a class="el" href="class_c_l_i_1_1_validator.html">Validator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_validator.html#ae5f66f889d8e006edbad1a58a7e608a3">operator &amp;</a> (const <a class="el" href="class_c_l_i_1_1_validator.html">Validator</a> &amp;other) const</td></tr>
-<tr class="memdesc:ae5f66f889d8e006edbad1a58a7e608a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Combining validators is a new validator. <br /></td></tr>
+<tr class="memitem:ae5f66f889d8e006edbad1a58a7e608a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_l_i_1_1_validator.html">Validator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_validator.html#ae5f66f889d8e006edbad1a58a7e608a3">operator &amp;</a> (const <a class="el" href="class_c_l_i_1_1_validator.html">Validator</a> &amp;other) const</td></tr>
 <tr class="separator:ae5f66f889d8e006edbad1a58a7e608a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac19919604a6ac47c5a1cbd34920991a4"><td class="memItemLeft" align="right" valign="top"><a id="ac19919604a6ac47c5a1cbd34920991a4"></a>
-<a class="el" href="class_c_l_i_1_1_validator.html">Validator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_validator.html#ac19919604a6ac47c5a1cbd34920991a4">operator|</a> (const <a class="el" href="class_c_l_i_1_1_validator.html">Validator</a> &amp;other) const</td></tr>
-<tr class="memdesc:ac19919604a6ac47c5a1cbd34920991a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Combining validators is a new validator. <br /></td></tr>
+<tr class="memitem:ac19919604a6ac47c5a1cbd34920991a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_l_i_1_1_validator.html">Validator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_validator.html#ac19919604a6ac47c5a1cbd34920991a4">operator|</a> (const <a class="el" href="class_c_l_i_1_1_validator.html">Validator</a> &amp;other) const</td></tr>
 <tr class="separator:ac19919604a6ac47c5a1cbd34920991a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
@@ -128,6 +124,33 @@ std::function&lt; std::string()&gt;&#160;</td><td class="memItemRight" valign="b
 <div class="textblock"><p>Some validators that are provided. </p>
 <p>These are simple <code>std::string(const std::string&amp;)</code> validators that are useful. They return a string if the validation fails. A custom struct is provided, as well, with the same user semantics, but with the ability to provide a new type name. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae5f66f889d8e006edbad1a58a7e608a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5f66f889d8e006edbad1a58a7e608a3">&#9670;&nbsp;</a></span>operator &amp;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_l_i_1_1_validator.html">Validator</a> CLI::Validator::operator &amp; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_c_l_i_1_1_validator.html">Validator</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Combining validators is a new validator. Type comes from left validator if function, otherwise only set if the same. </p>
+
+</div>
+</div>
 <a id="a97241be1f8ac1c8d2fabdcf2ec761f49"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a97241be1f8ac1c8d2fabdcf2ec761f49">&#9670;&nbsp;</a></span>operator()() <span class="overload">[1/2]</span></h2>
 
@@ -179,6 +202,33 @@ std::function&lt; std::string()&gt;&#160;</td><td class="memItemRight" valign="b
 </table>
 </div><div class="memdoc">
 <p>This is the required operator for a validator - provided to help users (CLI11 uses the member <code>func</code> directly) </p>
+
+</div>
+</div>
+<a id="ac19919604a6ac47c5a1cbd34920991a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac19919604a6ac47c5a1cbd34920991a4">&#9670;&nbsp;</a></span>operator|()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_l_i_1_1_validator.html">Validator</a> CLI::Validator::operator| </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_c_l_i_1_1_validator.html">Validator</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Combining validators is a new validator. Type comes from left validator if function, otherwise only set if the same. </p>
 
 </div>
 </div>

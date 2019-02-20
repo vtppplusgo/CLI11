@@ -11,7 +11,7 @@ var searchData=
   ['tname',['tname',['../class_c_l_i_1_1_validator.html#a2396b2b4e4af76793f5cc6d684166680',1,'CLI::Validator']]],
   ['tname_5ffunction',['tname_function',['../class_c_l_i_1_1_validator.html#a5868d2a22ea00376e7db257be8fbab4c',1,'CLI::Validator']]],
   ['to_5fstring',['to_string',['../class_c_l_i_1_1_timer.html#a35a7a90b7f96da40dfe4cbfb2f0b4f9e',1,'CLI::Timer']]],
-  ['transform',['transform',['../class_c_l_i_1_1_option.html#aec424ae8d4baed3d0195bd9cbc521554',1,'CLI::Option']]],
+  ['transform',['transform',['../class_c_l_i_1_1_option.html#a55bf2ac860145983d7046f759ad23e14',1,'CLI::Option::transform(const Validator &amp;validator)'],['../class_c_l_i_1_1_option.html#aec424ae8d4baed3d0195bd9cbc521554',1,'CLI::Option::transform(std::function&lt; std::string(std::string)&gt; func)']]],
   ['type_5fname',['type_name',['../class_c_l_i_1_1_option.html#addaddebd60f66aaedc13e5fb473db902',1,'CLI::Option']]],
   ['type_5fname_5f',['type_name_',['../class_c_l_i_1_1_option.html#a2080c70a11f8935118dffc924824aa87',1,'CLI::Option']]],
   ['type_5fname_5ffn',['type_name_fn',['../class_c_l_i_1_1_option.html#a08c4fc3c4d254ac57a48d5756626a03c',1,'CLI::Option']]],

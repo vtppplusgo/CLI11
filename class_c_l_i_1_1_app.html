@@ -82,10 +82,10 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Basic</div></td></tr>
-<tr class="memitem:a888d972ff7c217aa38a47ac0dff98c74"><td class="memItemLeft" align="right" valign="top"><a id="a888d972ff7c217aa38a47ac0dff98c74"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a888d972ff7c217aa38a47ac0dff98c74">App</a> (std::string <a class="el" href="class_c_l_i_1_1_app.html#a33abaeded5281c702ee6e4382539bfd8">description</a>=&quot;&quot;, std::string app_name=&quot;&quot;)</td></tr>
-<tr class="memdesc:a888d972ff7c217aa38a47ac0dff98c74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new program. Pass in the same arguments as main(), along with a help string. <br /></td></tr>
-<tr class="separator:a888d972ff7c217aa38a47ac0dff98c74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61fe9472ef81b1503159511bb8e76430"><td class="memItemLeft" align="right" valign="top"><a id="a61fe9472ef81b1503159511bb8e76430"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a61fe9472ef81b1503159511bb8e76430">App</a> (std::string app_description=&quot;&quot;, std::string app_name=&quot;&quot;)</td></tr>
+<tr class="memdesc:a61fe9472ef81b1503159511bb8e76430"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new program. Pass in the same arguments as main(), along with a help string. <br /></td></tr>
+<tr class="separator:a61fe9472ef81b1503159511bb8e76430"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8180d86b6a163d270f69ce6dd1c12e35"><td class="memItemLeft" align="right" valign="top"><a id="a8180d86b6a163d270f69ce6dd1c12e35"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a8180d86b6a163d270f69ce6dd1c12e35">~App</a> ()=default</td></tr>
 <tr class="memdesc:a8180d86b6a163d270f69ce6dd1c12e35"><td class="mdescLeft">&#160;</td><td class="mdescRight">virtual destructor <br /></td></tr>
@@ -143,70 +143,70 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:a2aee3915a2e24fc7806e25b9bbc2b37c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the OptionDefault object, to set option defaults. <br /></td></tr>
 <tr class="separator:a2aee3915a2e24fc7806e25b9bbc2b37c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Adding options</div></td></tr>
-<tr class="memitem:a5ca2904fef604eae11fa0b94a0f4cf6e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a5ca2904fef604eae11fa0b94a0f4cf6e">add_option</a> (std::string option_name, callback_t option_callback, std::string <a class="el" href="class_c_l_i_1_1_app.html#a33abaeded5281c702ee6e4382539bfd8">description</a>=&quot;&quot;, bool defaulted=false)</td></tr>
-<tr class="separator:a5ca2904fef604eae11fa0b94a0f4cf6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a974865166eb0a8516f7384848f40f488"><td class="memTemplParams" colspan="2">template&lt;typename T , enable_if_t&lt;!is_vector&lt; T &gt;::value, detail::enabler &gt;  = detail::dummy&gt; </td></tr>
-<tr class="memitem:a974865166eb0a8516f7384848f40f488"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a974865166eb0a8516f7384848f40f488">add_option</a> (std::string option_name, T &amp;variable, std::string <a class="el" href="class_c_l_i_1_1_app.html#a33abaeded5281c702ee6e4382539bfd8">description</a>=&quot;&quot;)</td></tr>
-<tr class="memdesc:a974865166eb0a8516f7384848f40f488"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add option for non-vectors (duplicate copy needed without defaulted to avoid <code>iostream &lt;&lt; value</code>)  <a href="#a974865166eb0a8516f7384848f40f488">More...</a><br /></td></tr>
-<tr class="separator:a974865166eb0a8516f7384848f40f488"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b0cdb6fa0ac78281df4bcdadafbb752"><td class="memTemplParams" colspan="2">template&lt;typename T , enable_if_t&lt;!is_vector&lt; T &gt;::value, detail::enabler &gt;  = detail::dummy&gt; </td></tr>
-<tr class="memitem:a5b0cdb6fa0ac78281df4bcdadafbb752"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a5b0cdb6fa0ac78281df4bcdadafbb752">add_option_function</a> (std::string option_name, const std::function&lt; bool(const T &amp;)&gt; &amp;func, std::string <a class="el" href="class_c_l_i_1_1_app.html#a33abaeded5281c702ee6e4382539bfd8">description</a>=&quot;&quot;)</td></tr>
-<tr class="memdesc:a5b0cdb6fa0ac78281df4bcdadafbb752"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add option for a callback of a specific type.  <a href="#a5b0cdb6fa0ac78281df4bcdadafbb752">More...</a><br /></td></tr>
-<tr class="separator:a5b0cdb6fa0ac78281df4bcdadafbb752"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad81e2b274dd3a1e8aff3037ff8e899f1"><td class="memTemplParams" colspan="2">template&lt;typename T , enable_if_t&lt;!is_vector&lt; T &gt;::value, detail::enabler &gt;  = detail::dummy&gt; </td></tr>
-<tr class="memitem:ad81e2b274dd3a1e8aff3037ff8e899f1"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#ad81e2b274dd3a1e8aff3037ff8e899f1">add_option</a> (std::string option_name, T &amp;variable, std::string <a class="el" href="class_c_l_i_1_1_app.html#a33abaeded5281c702ee6e4382539bfd8">description</a>, bool defaulted)</td></tr>
-<tr class="memdesc:ad81e2b274dd3a1e8aff3037ff8e899f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add option for non-vectors with a default print.  <a href="#ad81e2b274dd3a1e8aff3037ff8e899f1">More...</a><br /></td></tr>
-<tr class="separator:ad81e2b274dd3a1e8aff3037ff8e899f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3673a595e2bf20697aa0eb52ce15657c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a3673a595e2bf20697aa0eb52ce15657c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a3673a595e2bf20697aa0eb52ce15657c">add_option</a> (std::string option_name, std::vector&lt; T &gt; &amp;variable, std::string <a class="el" href="class_c_l_i_1_1_app.html#a33abaeded5281c702ee6e4382539bfd8">description</a>=&quot;&quot;, char delimiter='\0')</td></tr>
-<tr class="memdesc:a3673a595e2bf20697aa0eb52ce15657c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add option for vectors (no default)  <a href="#a3673a595e2bf20697aa0eb52ce15657c">More...</a><br /></td></tr>
-<tr class="separator:a3673a595e2bf20697aa0eb52ce15657c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1ca3862df00b20cfa9601bab993bc61"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ab1ca3862df00b20cfa9601bab993bc61"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#ab1ca3862df00b20cfa9601bab993bc61">add_option</a> (std::string option_name, std::vector&lt; T &gt; &amp;variable, std::string <a class="el" href="class_c_l_i_1_1_app.html#a33abaeded5281c702ee6e4382539bfd8">description</a>, bool defaulted, char delimiter='\0')</td></tr>
-<tr class="memdesc:ab1ca3862df00b20cfa9601bab993bc61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add option for vectors.  <a href="#ab1ca3862df00b20cfa9601bab993bc61">More...</a><br /></td></tr>
-<tr class="separator:ab1ca3862df00b20cfa9601bab993bc61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b0cdb6fa0ac78281df4bcdadafbb752"><td class="memTemplParams" colspan="2">template&lt;typename T , enable_if_t&lt; is_vector&lt; T &gt;::value, detail::enabler &gt;  = detail::dummy&gt; </td></tr>
-<tr class="memitem:a5b0cdb6fa0ac78281df4bcdadafbb752"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a5b0cdb6fa0ac78281df4bcdadafbb752">add_option_function</a> (std::string option_name, const std::function&lt; bool(const T &amp;)&gt; &amp;func, std::string <a class="el" href="class_c_l_i_1_1_app.html#a33abaeded5281c702ee6e4382539bfd8">description</a>=&quot;&quot;)</td></tr>
-<tr class="memdesc:a5b0cdb6fa0ac78281df4bcdadafbb752"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add option for a vector callback of a specific type.  <a href="#a5b0cdb6fa0ac78281df4bcdadafbb752">More...</a><br /></td></tr>
-<tr class="separator:a5b0cdb6fa0ac78281df4bcdadafbb752"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abce4dc6bc059207ed44b551e3de3fe93"><td class="memItemLeft" align="right" valign="top"><a id="abce4dc6bc059207ed44b551e3de3fe93"></a>
-<a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#abce4dc6bc059207ed44b551e3de3fe93">set_help_flag</a> (std::string flag_name=&quot;&quot;, std::string <a class="el" href="class_c_l_i_1_1_app.html#a33abaeded5281c702ee6e4382539bfd8">description</a>=&quot;&quot;)</td></tr>
-<tr class="memdesc:abce4dc6bc059207ed44b551e3de3fe93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a help flag, replace the existing one if present. <br /></td></tr>
-<tr class="separator:abce4dc6bc059207ed44b551e3de3fe93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3b0963c4f63164f02e025dffcd0b7d4"><td class="memItemLeft" align="right" valign="top"><a id="ad3b0963c4f63164f02e025dffcd0b7d4"></a>
-<a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#ad3b0963c4f63164f02e025dffcd0b7d4">set_help_all_flag</a> (std::string help_name=&quot;&quot;, std::string <a class="el" href="class_c_l_i_1_1_app.html#a33abaeded5281c702ee6e4382539bfd8">description</a>=&quot;&quot;)</td></tr>
-<tr class="memdesc:ad3b0963c4f63164f02e025dffcd0b7d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a help all flag, replaced the existing one if present. <br /></td></tr>
-<tr class="separator:ad3b0963c4f63164f02e025dffcd0b7d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a389abdbb57d5958ee39d5867c48de573"><td class="memItemLeft" align="right" valign="top"><a id="a389abdbb57d5958ee39d5867c48de573"></a>
-<a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a389abdbb57d5958ee39d5867c48de573">add_flag</a> (std::string flag_name, std::string <a class="el" href="class_c_l_i_1_1_app.html#a33abaeded5281c702ee6e4382539bfd8">description</a>=&quot;&quot;)</td></tr>
-<tr class="memdesc:a389abdbb57d5958ee39d5867c48de573"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add option for flag. <br /></td></tr>
-<tr class="separator:a389abdbb57d5958ee39d5867c48de573"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec76a21fd57ef278eb675a53448df7a7"><td class="memTemplParams" colspan="2">template&lt;typename T , enable_if_t&lt; std::is_integral&lt; T &gt;::value &amp;&amp;!is_bool&lt; T &gt;::value, detail::enabler &gt;  = detail::dummy&gt; </td></tr>
-<tr class="memitem:aec76a21fd57ef278eb675a53448df7a7"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#aec76a21fd57ef278eb675a53448df7a7">add_flag</a> (std::string flag_name, T &amp;flag_count, std::string <a class="el" href="class_c_l_i_1_1_app.html#a33abaeded5281c702ee6e4382539bfd8">description</a>=&quot;&quot;)</td></tr>
-<tr class="memdesc:aec76a21fd57ef278eb675a53448df7a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add option for flag integer.  <a href="#aec76a21fd57ef278eb675a53448df7a7">More...</a><br /></td></tr>
-<tr class="separator:aec76a21fd57ef278eb675a53448df7a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5bd40633cd7622a0eb8dcaeb2117986c"><td class="memTemplParams" colspan="2">template&lt;typename T , enable_if_t&lt; is_bool&lt; T &gt;::value, detail::enabler &gt;  = detail::dummy&gt; </td></tr>
-<tr class="memitem:a5bd40633cd7622a0eb8dcaeb2117986c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a5bd40633cd7622a0eb8dcaeb2117986c">add_flag</a> (std::string flag_name, T &amp;flag_result, std::string <a class="el" href="class_c_l_i_1_1_app.html#a33abaeded5281c702ee6e4382539bfd8">description</a>=&quot;&quot;)</td></tr>
-<tr class="separator:a5bd40633cd7622a0eb8dcaeb2117986c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4120e9de8f0c25c5b9e79cc7b3bbf7dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a4120e9de8f0c25c5b9e79cc7b3bbf7dd">add_flag_function</a> (std::string flag_name, std::function&lt; void(int)&gt; function, std::string <a class="el" href="class_c_l_i_1_1_app.html#a33abaeded5281c702ee6e4382539bfd8">description</a>=&quot;&quot;)</td></tr>
-<tr class="memdesc:a4120e9de8f0c25c5b9e79cc7b3bbf7dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add option for callback.  <a href="#a4120e9de8f0c25c5b9e79cc7b3bbf7dd">More...</a><br /></td></tr>
-<tr class="separator:a4120e9de8f0c25c5b9e79cc7b3bbf7dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6132aab8480729e3e14a84954cd881a"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ac6132aab8480729e3e14a84954cd881a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#ac6132aab8480729e3e14a84954cd881a">add_set</a> (std::string option_name, T &amp;member, std::set&lt; T &gt; options, std::string <a class="el" href="class_c_l_i_1_1_app.html#a33abaeded5281c702ee6e4382539bfd8">description</a>=&quot;&quot;)</td></tr>
-<tr class="memdesc:ac6132aab8480729e3e14a84954cd881a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add set of options (No default, temp reference, such as an inline set) DEPRECATED.  <a href="#ac6132aab8480729e3e14a84954cd881a">More...</a><br /></td></tr>
-<tr class="separator:ac6132aab8480729e3e14a84954cd881a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a397c7011eb1817fb53dac13f1b6afd01"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a397c7011eb1817fb53dac13f1b6afd01"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a397c7011eb1817fb53dac13f1b6afd01">add_mutable_set</a> (std::string option_name, T &amp;member, const std::set&lt; T &gt; &amp;options, std::string <a class="el" href="class_c_l_i_1_1_app.html#a33abaeded5281c702ee6e4382539bfd8">description</a>=&quot;&quot;)</td></tr>
-<tr class="memdesc:a397c7011eb1817fb53dac13f1b6afd01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add set of options (No default, set can be changed afterwords - do not destroy the set) DEPRECATED.  <a href="#a397c7011eb1817fb53dac13f1b6afd01">More...</a><br /></td></tr>
-<tr class="separator:a397c7011eb1817fb53dac13f1b6afd01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3266e3b66973b9783cad4403044a8be"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ab3266e3b66973b9783cad4403044a8be"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#ab3266e3b66973b9783cad4403044a8be">add_set</a> (std::string option_name, T &amp;member, std::set&lt; T &gt; options, std::string <a class="el" href="class_c_l_i_1_1_app.html#a33abaeded5281c702ee6e4382539bfd8">description</a>, bool defaulted)</td></tr>
-<tr class="memdesc:ab3266e3b66973b9783cad4403044a8be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add set of options (with default, static set, such as an inline set) DEPRECATED.  <a href="#ab3266e3b66973b9783cad4403044a8be">More...</a><br /></td></tr>
-<tr class="separator:ab3266e3b66973b9783cad4403044a8be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40abb3b5fa287834fc94281762cfc8bc"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a40abb3b5fa287834fc94281762cfc8bc"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a40abb3b5fa287834fc94281762cfc8bc">add_mutable_set</a> (std::string option_name, T &amp;member, const std::set&lt; T &gt; &amp;options, std::string <a class="el" href="class_c_l_i_1_1_app.html#a33abaeded5281c702ee6e4382539bfd8">description</a>, bool defaulted)</td></tr>
-<tr class="memdesc:a40abb3b5fa287834fc94281762cfc8bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add set of options (with default, set can be changed afterwards - do not destroy the set) DEPRECATED.  <a href="#a40abb3b5fa287834fc94281762cfc8bc">More...</a><br /></td></tr>
-<tr class="separator:a40abb3b5fa287834fc94281762cfc8bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2969fd9427419b3f9b53e19b918543be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a2969fd9427419b3f9b53e19b918543be">add_option</a> (std::string option_name, callback_t option_callback, std::string option_description=&quot;&quot;, bool defaulted=false)</td></tr>
+<tr class="separator:a2969fd9427419b3f9b53e19b918543be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa6a1a79a7f33ca6ecb4a692ff7f5b16"><td class="memTemplParams" colspan="2">template&lt;typename T , enable_if_t&lt;!is_vector&lt; T &gt;::value, detail::enabler &gt;  = detail::dummy&gt; </td></tr>
+<tr class="memitem:afa6a1a79a7f33ca6ecb4a692ff7f5b16"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#afa6a1a79a7f33ca6ecb4a692ff7f5b16">add_option</a> (std::string option_name, T &amp;variable, std::string option_description=&quot;&quot;)</td></tr>
+<tr class="memdesc:afa6a1a79a7f33ca6ecb4a692ff7f5b16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add option for non-vectors (duplicate copy needed without defaulted to avoid <code>iostream &lt;&lt; value</code>)  <a href="#afa6a1a79a7f33ca6ecb4a692ff7f5b16">More...</a><br /></td></tr>
+<tr class="separator:afa6a1a79a7f33ca6ecb4a692ff7f5b16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b31d66cb0934ec5428ea5106a863234"><td class="memTemplParams" colspan="2">template&lt;typename T , enable_if_t&lt;!is_vector&lt; T &gt;::value, detail::enabler &gt;  = detail::dummy&gt; </td></tr>
+<tr class="memitem:a2b31d66cb0934ec5428ea5106a863234"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a2b31d66cb0934ec5428ea5106a863234">add_option_function</a> (std::string option_name, const std::function&lt; bool(const T &amp;)&gt; &amp;func, std::string option_description=&quot;&quot;)</td></tr>
+<tr class="memdesc:a2b31d66cb0934ec5428ea5106a863234"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add option for a callback of a specific type.  <a href="#a2b31d66cb0934ec5428ea5106a863234">More...</a><br /></td></tr>
+<tr class="separator:a2b31d66cb0934ec5428ea5106a863234"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b5308366c3035d4ea43a86282c32aa8"><td class="memTemplParams" colspan="2">template&lt;typename T , enable_if_t&lt;!is_vector&lt; T &gt;::value, detail::enabler &gt;  = detail::dummy&gt; </td></tr>
+<tr class="memitem:a3b5308366c3035d4ea43a86282c32aa8"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a3b5308366c3035d4ea43a86282c32aa8">add_option</a> (std::string option_name, T &amp;variable, std::string option_description, bool defaulted)</td></tr>
+<tr class="memdesc:a3b5308366c3035d4ea43a86282c32aa8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add option for non-vectors with a default print.  <a href="#a3b5308366c3035d4ea43a86282c32aa8">More...</a><br /></td></tr>
+<tr class="separator:a3b5308366c3035d4ea43a86282c32aa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04ddb3e44dee395f92fcb82eb098febe"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a04ddb3e44dee395f92fcb82eb098febe"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a04ddb3e44dee395f92fcb82eb098febe">add_option</a> (std::string option_name, std::vector&lt; T &gt; &amp;variable, std::string option_description=&quot;&quot;, char delimiter='\0')</td></tr>
+<tr class="memdesc:a04ddb3e44dee395f92fcb82eb098febe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add option for vectors (no default)  <a href="#a04ddb3e44dee395f92fcb82eb098febe">More...</a><br /></td></tr>
+<tr class="separator:a04ddb3e44dee395f92fcb82eb098febe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d8c076bf110df8197411e66c02730c6"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a4d8c076bf110df8197411e66c02730c6"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a4d8c076bf110df8197411e66c02730c6">add_option</a> (std::string option_name, std::vector&lt; T &gt; &amp;variable, std::string option_description, bool defaulted, char delimiter='\0')</td></tr>
+<tr class="memdesc:a4d8c076bf110df8197411e66c02730c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add option for vectors.  <a href="#a4d8c076bf110df8197411e66c02730c6">More...</a><br /></td></tr>
+<tr class="separator:a4d8c076bf110df8197411e66c02730c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5800496fef71aea9322c25e1fc5f1a88"><td class="memTemplParams" colspan="2">template&lt;typename T , enable_if_t&lt; is_vector&lt; T &gt;::value, detail::enabler &gt;  = detail::dummy&gt; </td></tr>
+<tr class="memitem:a5800496fef71aea9322c25e1fc5f1a88"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a5800496fef71aea9322c25e1fc5f1a88">add_option_function</a> (std::string option_name, const std::function&lt; bool(const T &amp;)&gt; &amp;func, std::string option_description=&quot;&quot;, char delimiter='\0')</td></tr>
+<tr class="memdesc:a5800496fef71aea9322c25e1fc5f1a88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add option for a vector callback of a specific type.  <a href="#a5800496fef71aea9322c25e1fc5f1a88">More...</a><br /></td></tr>
+<tr class="separator:a5800496fef71aea9322c25e1fc5f1a88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2c180230e4bd05d5940b386e93bd47d"><td class="memItemLeft" align="right" valign="top"><a id="ac2c180230e4bd05d5940b386e93bd47d"></a>
+<a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#ac2c180230e4bd05d5940b386e93bd47d">set_help_flag</a> (std::string flag_name=&quot;&quot;, std::string help_description=&quot;&quot;)</td></tr>
+<tr class="memdesc:ac2c180230e4bd05d5940b386e93bd47d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a help flag, replace the existing one if present. <br /></td></tr>
+<tr class="separator:ac2c180230e4bd05d5940b386e93bd47d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80eb3de653e129d510486d8e0011baf1"><td class="memItemLeft" align="right" valign="top"><a id="a80eb3de653e129d510486d8e0011baf1"></a>
+<a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a80eb3de653e129d510486d8e0011baf1">set_help_all_flag</a> (std::string help_name=&quot;&quot;, std::string help_description=&quot;&quot;)</td></tr>
+<tr class="memdesc:a80eb3de653e129d510486d8e0011baf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a help all flag, replaced the existing one if present. <br /></td></tr>
+<tr class="separator:a80eb3de653e129d510486d8e0011baf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dc03e181b9419c2bf157ce2e4727a07"><td class="memItemLeft" align="right" valign="top"><a id="a0dc03e181b9419c2bf157ce2e4727a07"></a>
+<a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a0dc03e181b9419c2bf157ce2e4727a07">add_flag</a> (std::string flag_name, std::string flag_description=&quot;&quot;)</td></tr>
+<tr class="memdesc:a0dc03e181b9419c2bf157ce2e4727a07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add option for flag. <br /></td></tr>
+<tr class="separator:a0dc03e181b9419c2bf157ce2e4727a07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e11ed2467b046bd8ea664152c2a9004"><td class="memTemplParams" colspan="2">template&lt;typename T , enable_if_t&lt; std::is_integral&lt; T &gt;::value &amp;&amp;!is_bool&lt; T &gt;::value, detail::enabler &gt;  = detail::dummy&gt; </td></tr>
+<tr class="memitem:a0e11ed2467b046bd8ea664152c2a9004"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a0e11ed2467b046bd8ea664152c2a9004">add_flag</a> (std::string flag_name, T &amp;flag_count, std::string flag_description=&quot;&quot;)</td></tr>
+<tr class="memdesc:a0e11ed2467b046bd8ea664152c2a9004"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add option for flag integer.  <a href="#a0e11ed2467b046bd8ea664152c2a9004">More...</a><br /></td></tr>
+<tr class="separator:a0e11ed2467b046bd8ea664152c2a9004"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a496bc8b2f77bf24c638e4c6c3e018131"><td class="memTemplParams" colspan="2">template&lt;typename T , enable_if_t&lt; is_bool&lt; T &gt;::value, detail::enabler &gt;  = detail::dummy&gt; </td></tr>
+<tr class="memitem:a496bc8b2f77bf24c638e4c6c3e018131"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a496bc8b2f77bf24c638e4c6c3e018131">add_flag</a> (std::string flag_name, T &amp;flag_result, std::string flag_description=&quot;&quot;)</td></tr>
+<tr class="separator:a496bc8b2f77bf24c638e4c6c3e018131"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab11de0cd518ea13c19b052c6cfd5a359"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#ab11de0cd518ea13c19b052c6cfd5a359">add_flag_function</a> (std::string flag_name, std::function&lt; void(int)&gt; function, std::string flag_description=&quot;&quot;)</td></tr>
+<tr class="memdesc:ab11de0cd518ea13c19b052c6cfd5a359"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add option for callback.  <a href="#ab11de0cd518ea13c19b052c6cfd5a359">More...</a><br /></td></tr>
+<tr class="separator:ab11de0cd518ea13c19b052c6cfd5a359"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af004ba90bbb8ba494e2e13d731d87f98"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:af004ba90bbb8ba494e2e13d731d87f98"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#af004ba90bbb8ba494e2e13d731d87f98">add_set</a> (std::string option_name, T &amp;member, std::set&lt; T &gt; options, std::string option_description=&quot;&quot;)</td></tr>
+<tr class="memdesc:af004ba90bbb8ba494e2e13d731d87f98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add set of options (No default, temp reference, such as an inline set) DEPRECATED.  <a href="#af004ba90bbb8ba494e2e13d731d87f98">More...</a><br /></td></tr>
+<tr class="separator:af004ba90bbb8ba494e2e13d731d87f98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5884b9a50eef3f8f6a1769b52073c57c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a5884b9a50eef3f8f6a1769b52073c57c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a5884b9a50eef3f8f6a1769b52073c57c">add_mutable_set</a> (std::string option_name, T &amp;member, const std::set&lt; T &gt; &amp;options, std::string option_description=&quot;&quot;)</td></tr>
+<tr class="memdesc:a5884b9a50eef3f8f6a1769b52073c57c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add set of options (No default, set can be changed afterwards - do not destroy the set) DEPRECATED.  <a href="#a5884b9a50eef3f8f6a1769b52073c57c">More...</a><br /></td></tr>
+<tr class="separator:a5884b9a50eef3f8f6a1769b52073c57c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5371ce3c7ff0e36b2899321aed4d8393"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a5371ce3c7ff0e36b2899321aed4d8393"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a5371ce3c7ff0e36b2899321aed4d8393">add_set</a> (std::string option_name, T &amp;member, std::set&lt; T &gt; options, std::string option_description, bool defaulted)</td></tr>
+<tr class="memdesc:a5371ce3c7ff0e36b2899321aed4d8393"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add set of options (with default, static set, such as an inline set) DEPRECATED.  <a href="#a5371ce3c7ff0e36b2899321aed4d8393">More...</a><br /></td></tr>
+<tr class="separator:a5371ce3c7ff0e36b2899321aed4d8393"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0052bd76083c47973cdf5944c4547ea"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ac0052bd76083c47973cdf5944c4547ea"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#ac0052bd76083c47973cdf5944c4547ea">add_mutable_set</a> (std::string option_name, T &amp;member, const std::set&lt; T &gt; &amp;options, std::string option_description, bool defaulted)</td></tr>
+<tr class="memdesc:ac0052bd76083c47973cdf5944c4547ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add set of options (with default, set can be changed afterwards - do not destroy the set) DEPRECATED.  <a href="#ac0052bd76083c47973cdf5944c4547ea">More...</a><br /></td></tr>
+<tr class="separator:ac0052bd76083c47973cdf5944c4547ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a743d0cb6dcca15e0ec4ac169ca0512eb"><td class="memItemLeft" align="right" valign="top"><a id="a743d0cb6dcca15e0ec4ac169ca0512eb"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a743d0cb6dcca15e0ec4ac169ca0512eb">CLI11_DEPRECATED</a> (&quot;Use -&gt;transform(<a class="el" href="class_c_l_i_1_1_is_member.html">CLI::IsMember</a>(..., CLI::ignore_case)) instead&quot;) Option *add_set_ignore_case(std</td></tr>
 <tr class="memdesc:a743d0cb6dcca15e0ec4ac169ca0512eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add set of options, string only, ignore case (no default, static set) DEPRECATED. <br /></td></tr>
@@ -243,11 +243,11 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:ab7693cc9b5c9128a14947472937ac3a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36030e32b98d1a142f417b591d1533fd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a36030e32b98d1a142f417b591d1533fd">CLI11_DEPRECATED</a> (&quot;Use -&gt;transform(<a class="el" href="class_c_l_i_1_1_is_member.html">CLI::IsMember</a>(..., CLI::ignore_case, CLI::ignore_underscore)) with a (shared) pointer instead&quot;) Option *add_mutable_set_ignore_case_underscore(std</td></tr>
 <tr class="separator:a36030e32b98d1a142f417b591d1533fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b88bd1207ff56de7ea0382d08ca8eca"><td class="memTemplParams" colspan="2"><a id="a3b88bd1207ff56de7ea0382d08ca8eca"></a>
+<tr class="memitem:a4fc76ed22c4ff32f8c3347c0c76a8bba"><td class="memTemplParams" colspan="2"><a id="a4fc76ed22c4ff32f8c3347c0c76a8bba"></a>
 template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a3b88bd1207ff56de7ea0382d08ca8eca"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a3b88bd1207ff56de7ea0382d08ca8eca">add_complex</a> (std::string option_name, T &amp;variable, std::string <a class="el" href="class_c_l_i_1_1_app.html#a33abaeded5281c702ee6e4382539bfd8">description</a>=&quot;&quot;, bool defaulted=false, std::string label=&quot;COMPLEX&quot;)</td></tr>
-<tr class="memdesc:a3b88bd1207ff56de7ea0382d08ca8eca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a complex number. <br /></td></tr>
-<tr class="separator:a3b88bd1207ff56de7ea0382d08ca8eca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fc76ed22c4ff32f8c3347c0c76a8bba"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a4fc76ed22c4ff32f8c3347c0c76a8bba">add_complex</a> (std::string option_name, T &amp;variable, std::string option_description=&quot;&quot;, bool defaulted=false, std::string label=&quot;COMPLEX&quot;)</td></tr>
+<tr class="memdesc:a4fc76ed22c4ff32f8c3347c0c76a8bba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a complex number. <br /></td></tr>
+<tr class="separator:a4fc76ed22c4ff32f8c3347c0c76a8bba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc473375a58f5f90295058222f2d1054"><td class="memItemLeft" align="right" valign="top"><a id="adc473375a58f5f90295058222f2d1054"></a>
 <a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#adc473375a58f5f90295058222f2d1054">set_config</a> (std::string option_name=&quot;&quot;, std::string default_filename=&quot;&quot;, std::string help_message=&quot;Read an ini file&quot;, bool required=false)</td></tr>
 <tr class="memdesc:adc473375a58f5f90295058222f2d1054"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a configuration ini file option, or clear it if no name passed. <br /></td></tr>
@@ -257,10 +257,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:a3058b128735eec0813589b56c5453115"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes an option from the <a class="el" href="class_c_l_i_1_1_app.html" title="Creates a command line program, with very few defaults.">App</a>. Takes an option pointer. Returns true if found and removed. <br /></td></tr>
 <tr class="separator:a3058b128735eec0813589b56c5453115"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Subcommmands</div></td></tr>
-<tr class="memitem:a27a7d399f74c697463ed9e406c945a96"><td class="memItemLeft" align="right" valign="top"><a id="a27a7d399f74c697463ed9e406c945a96"></a>
-<a class="el" href="class_c_l_i_1_1_app.html">App</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a27a7d399f74c697463ed9e406c945a96">add_subcommand</a> (std::string subcommand_name=&quot;&quot;, std::string <a class="el" href="class_c_l_i_1_1_app.html#a33abaeded5281c702ee6e4382539bfd8">description</a>=&quot;&quot;)</td></tr>
-<tr class="memdesc:a27a7d399f74c697463ed9e406c945a96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a subcommand. Inherits INHERITABLE and <a class="el" href="class_c_l_i_1_1_option_defaults.html">OptionDefaults</a>, and help flag. <br /></td></tr>
-<tr class="separator:a27a7d399f74c697463ed9e406c945a96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ad6eb4ec4c5f4a0a9593af9f3fcf9cc"><td class="memItemLeft" align="right" valign="top"><a id="a7ad6eb4ec4c5f4a0a9593af9f3fcf9cc"></a>
+<a class="el" href="class_c_l_i_1_1_app.html">App</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a7ad6eb4ec4c5f4a0a9593af9f3fcf9cc">add_subcommand</a> (std::string subcommand_name=&quot;&quot;, std::string subcommand_description=&quot;&quot;)</td></tr>
+<tr class="memdesc:a7ad6eb4ec4c5f4a0a9593af9f3fcf9cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a subcommand. Inherits INHERITABLE and <a class="el" href="class_c_l_i_1_1_option_defaults.html">OptionDefaults</a>, and help flag. <br /></td></tr>
+<tr class="separator:a7ad6eb4ec4c5f4a0a9593af9f3fcf9cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9add649c4bc409afcb6b99650417b68d"><td class="memItemLeft" align="right" valign="top"><a id="a9add649c4bc409afcb6b99650417b68d"></a>
 <a class="el" href="class_c_l_i_1_1_app.html">App</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a9add649c4bc409afcb6b99650417b68d">add_subcommand</a> (CLI::App_p subcom)</td></tr>
 <tr class="memdesc:a9add649c4bc409afcb6b99650417b68d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a previously created app as a subcommand. <br /></td></tr>
@@ -340,10 +340,10 @@ std::shared_ptr&lt; Config &gt;&#160;</td><td class="memItemRight" valign="botto
 std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#ab7637441b1cd7fb2fcf5e7e095e779a7">get_description</a> () const</td></tr>
 <tr class="memdesc:ab7637441b1cd7fb2fcf5e7e095e779a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the app or subcommand description. <br /></td></tr>
 <tr class="separator:ab7637441b1cd7fb2fcf5e7e095e779a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33abaeded5281c702ee6e4382539bfd8"><td class="memItemLeft" align="right" valign="top"><a id="a33abaeded5281c702ee6e4382539bfd8"></a>
-<a class="el" href="class_c_l_i_1_1_app.html">App</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a33abaeded5281c702ee6e4382539bfd8">description</a> (const std::string &amp;description)</td></tr>
-<tr class="memdesc:a33abaeded5281c702ee6e4382539bfd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the description. <br /></td></tr>
-<tr class="separator:a33abaeded5281c702ee6e4382539bfd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c26c64a49536e623739685f42475fc2"><td class="memItemLeft" align="right" valign="top"><a id="a5c26c64a49536e623739685f42475fc2"></a>
+<a class="el" href="class_c_l_i_1_1_app.html">App</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a5c26c64a49536e623739685f42475fc2">description</a> (std::string app_description)</td></tr>
+<tr class="memdesc:a5c26c64a49536e623739685f42475fc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the description of the app. <br /></td></tr>
+<tr class="separator:a5c26c64a49536e623739685f42475fc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75712a759ad90c77df128c01844b75fb"><td class="memItemLeft" align="right" valign="top"><a id="a75712a759ad90c77df128c01844b75fb"></a>
 std::vector&lt; const <a class="el" href="class_c_l_i_1_1_option.html">Option</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a75712a759ad90c77df128c01844b75fb">get_options</a> (const std::function&lt; bool(const <a class="el" href="class_c_l_i_1_1_option.html">Option</a> *)&gt; filter={}) const</td></tr>
 <tr class="memdesc:a75712a759ad90c77df128c01844b75fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the list of options (user facing function, so returns raw pointers), has optional filter function. <br /></td></tr>
@@ -459,9 +459,9 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a4eb093d9b53223c7cb897ed6a9cedfaf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a4eb093d9b53223c7cb897ed6a9cedfaf">App</a> (std::string <a class="el" href="class_c_l_i_1_1_app.html#a33abaeded5281c702ee6e4382539bfd8">description</a>, std::string app_name, <a class="el" href="class_c_l_i_1_1_app.html">App</a> *parent)</td></tr>
-<tr class="memdesc:a4eb093d9b53223c7cb897ed6a9cedfaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Special private constructor for subcommand.  <a href="#a4eb093d9b53223c7cb897ed6a9cedfaf">More...</a><br /></td></tr>
-<tr class="separator:a4eb093d9b53223c7cb897ed6a9cedfaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa53fda3b6aa477158ea8b1768342cc0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#aaa53fda3b6aa477158ea8b1768342cc0">App</a> (std::string app_description, std::string app_name, <a class="el" href="class_c_l_i_1_1_app.html">App</a> *parent)</td></tr>
+<tr class="memdesc:aaa53fda3b6aa477158ea8b1768342cc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Special private constructor for subcommand.  <a href="#aaa53fda3b6aa477158ea8b1768342cc0">More...</a><br /></td></tr>
+<tr class="separator:aaa53fda3b6aa477158ea8b1768342cc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2908ce3eded7e3d6bb2e6fdd2410576"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#ae2908ce3eded7e3d6bb2e6fdd2410576">_validate</a> () const</td></tr>
 <tr class="separator:ae2908ce3eded7e3d6bb2e6fdd2410576"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd99119433fcca2901ad13714d3acb0a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#acd99119433fcca2901ad13714d3acb0a">_configure</a> ()</td></tr>
@@ -703,8 +703,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <div class="textblock"><p>Creates a command line program, with very few defaults. </p>
 <p>To use, create a new <code>Program()</code> instance with <code>argc</code>, <code>argv</code>, and a help description. The templated add_option methods make it easy to prepare options. Remember to call <code>.start</code> before starting your program, so that the options can be evaluated and the help option doesn't accidentally run your program. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a4eb093d9b53223c7cb897ed6a9cedfaf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4eb093d9b53223c7cb897ed6a9cedfaf">&#9670;&nbsp;</a></span>App()</h2>
+<a id="aaa53fda3b6aa477158ea8b1768342cc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa53fda3b6aa477158ea8b1768342cc0">&#9670;&nbsp;</a></span>App()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -716,7 +716,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
           <td class="memname">CLI::App::App </td>
           <td>(</td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>description</em>, </td>
+          <td class="paramname"><em>app_description</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -960,8 +960,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 </div>
 </div>
-<a id="aec76a21fd57ef278eb675a53448df7a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec76a21fd57ef278eb675a53448df7a7">&#9670;&nbsp;</a></span>add_flag() <span class="overload">[1/2]</span></h2>
+<a id="a0e11ed2467b046bd8ea664152c2a9004"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e11ed2467b046bd8ea664152c2a9004">&#9670;&nbsp;</a></span>add_flag() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -987,7 +987,7 @@ template&lt;typename T , enable_if_t&lt; std::is_integral&lt; T &gt;::value &amp
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>description</em> = <code>&quot;&quot;</code>&#160;</td>
+          <td class="paramname"><em>flag_description</em> = <code>&quot;&quot;</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1012,8 +1012,8 @@ template&lt;typename T , enable_if_t&lt; std::is_integral&lt; T &gt;::value &amp
 
 </div>
 </div>
-<a id="a5bd40633cd7622a0eb8dcaeb2117986c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5bd40633cd7622a0eb8dcaeb2117986c">&#9670;&nbsp;</a></span>add_flag() <span class="overload">[2/2]</span></h2>
+<a id="a496bc8b2f77bf24c638e4c6c3e018131"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a496bc8b2f77bf24c638e4c6c3e018131">&#9670;&nbsp;</a></span>add_flag() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1039,7 +1039,7 @@ template&lt;typename T , enable_if_t&lt; is_bool&lt; T &gt;::value, detail::enab
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>description</em> = <code>&quot;&quot;</code>&#160;</td>
+          <td class="paramname"><em>flag_description</em> = <code>&quot;&quot;</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1063,8 +1063,8 @@ template&lt;typename T , enable_if_t&lt; is_bool&lt; T &gt;::value, detail::enab
 
 </div>
 </div>
-<a id="a4120e9de8f0c25c5b9e79cc7b3bbf7dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4120e9de8f0c25c5b9e79cc7b3bbf7dd">&#9670;&nbsp;</a></span>add_flag_function()</h2>
+<a id="ab11de0cd518ea13c19b052c6cfd5a359"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab11de0cd518ea13c19b052c6cfd5a359">&#9670;&nbsp;</a></span>add_flag_function()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1088,7 +1088,7 @@ template&lt;typename T , enable_if_t&lt; is_bool&lt; T &gt;::value, detail::enab
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>description</em> = <code>&quot;&quot;</code>&#160;</td>
+          <td class="paramname"><em>flag_description</em> = <code>&quot;&quot;</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1113,8 +1113,8 @@ template&lt;typename T , enable_if_t&lt; is_bool&lt; T &gt;::value, detail::enab
 
 </div>
 </div>
-<a id="a397c7011eb1817fb53dac13f1b6afd01"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a397c7011eb1817fb53dac13f1b6afd01">&#9670;&nbsp;</a></span>add_mutable_set() <span class="overload">[1/2]</span></h2>
+<a id="a5884b9a50eef3f8f6a1769b52073c57c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5884b9a50eef3f8f6a1769b52073c57c">&#9670;&nbsp;</a></span>add_mutable_set() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1146,7 +1146,7 @@ template&lt;typename T &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>description</em> = <code>&quot;&quot;</code>&#160;</td>
+          <td class="paramname"><em>option_description</em> = <code>&quot;&quot;</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1161,7 +1161,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Add set of options (No default, set can be changed afterwords - do not destroy the set) DEPRECATED. </p>
+<p>Add set of options (No default, set can be changed afterwards - do not destroy the set) DEPRECATED. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">member</td><td>The selected member of the set </td></tr>
@@ -1172,8 +1172,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a40abb3b5fa287834fc94281762cfc8bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a40abb3b5fa287834fc94281762cfc8bc">&#9670;&nbsp;</a></span>add_mutable_set() <span class="overload">[2/2]</span></h2>
+<a id="ac0052bd76083c47973cdf5944c4547ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0052bd76083c47973cdf5944c4547ea">&#9670;&nbsp;</a></span>add_mutable_set() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1205,7 +1205,7 @@ template&lt;typename T &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>description</em>, </td>
+          <td class="paramname"><em>option_description</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1237,8 +1237,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a5ca2904fef604eae11fa0b94a0f4cf6e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ca2904fef604eae11fa0b94a0f4cf6e">&#9670;&nbsp;</a></span>add_option() <span class="overload">[1/5]</span></h2>
+<a id="a2969fd9427419b3f9b53e19b918543be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2969fd9427419b3f9b53e19b918543be">&#9670;&nbsp;</a></span>add_option() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1262,7 +1262,7 @@ template&lt;typename T &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>description</em> = <code>&quot;&quot;</code>, </td>
+          <td class="paramname"><em>option_description</em> = <code>&quot;&quot;</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1290,8 +1290,8 @@ program.add_option("filename", filename, "description of filename");
 </pre> 
 </div>
 </div>
-<a id="a974865166eb0a8516f7384848f40f488"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a974865166eb0a8516f7384848f40f488">&#9670;&nbsp;</a></span>add_option() <span class="overload">[2/5]</span></h2>
+<a id="afa6a1a79a7f33ca6ecb4a692ff7f5b16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa6a1a79a7f33ca6ecb4a692ff7f5b16">&#9670;&nbsp;</a></span>add_option() <span class="overload">[2/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1317,7 +1317,7 @@ template&lt;typename T , enable_if_t&lt;!is_vector&lt; T &gt;::value, detail::en
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>description</em> = <code>&quot;&quot;</code>&#160;</td>
+          <td class="paramname"><em>option_description</em> = <code>&quot;&quot;</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1342,8 +1342,8 @@ template&lt;typename T , enable_if_t&lt;!is_vector&lt; T &gt;::value, detail::en
 
 </div>
 </div>
-<a id="ad81e2b274dd3a1e8aff3037ff8e899f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad81e2b274dd3a1e8aff3037ff8e899f1">&#9670;&nbsp;</a></span>add_option() <span class="overload">[3/5]</span></h2>
+<a id="a3b5308366c3035d4ea43a86282c32aa8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b5308366c3035d4ea43a86282c32aa8">&#9670;&nbsp;</a></span>add_option() <span class="overload">[3/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1369,7 +1369,7 @@ template&lt;typename T , enable_if_t&lt;!is_vector&lt; T &gt;::value, detail::en
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>description</em>, </td>
+          <td class="paramname"><em>option_description</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1400,8 +1400,8 @@ template&lt;typename T , enable_if_t&lt;!is_vector&lt; T &gt;::value, detail::en
 
 </div>
 </div>
-<a id="a3673a595e2bf20697aa0eb52ce15657c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3673a595e2bf20697aa0eb52ce15657c">&#9670;&nbsp;</a></span>add_option() <span class="overload">[4/5]</span></h2>
+<a id="a04ddb3e44dee395f92fcb82eb098febe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04ddb3e44dee395f92fcb82eb098febe">&#9670;&nbsp;</a></span>add_option() <span class="overload">[4/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1427,7 +1427,7 @@ template&lt;typename T &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>description</em> = <code>&quot;&quot;</code>, </td>
+          <td class="paramname"><em>option_description</em> = <code>&quot;&quot;</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1458,8 +1458,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="ab1ca3862df00b20cfa9601bab993bc61"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1ca3862df00b20cfa9601bab993bc61">&#9670;&nbsp;</a></span>add_option() <span class="overload">[5/5]</span></h2>
+<a id="a4d8c076bf110df8197411e66c02730c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d8c076bf110df8197411e66c02730c6">&#9670;&nbsp;</a></span>add_option() <span class="overload">[5/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1485,7 +1485,7 @@ template&lt;typename T &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>description</em>, </td>
+          <td class="paramname"><em>option_description</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1522,8 +1522,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a5b0cdb6fa0ac78281df4bcdadafbb752"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5b0cdb6fa0ac78281df4bcdadafbb752">&#9670;&nbsp;</a></span>add_option_function() <span class="overload">[1/2]</span></h2>
+<a id="a2b31d66cb0934ec5428ea5106a863234"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b31d66cb0934ec5428ea5106a863234">&#9670;&nbsp;</a></span>add_option_function() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1549,7 +1549,7 @@ template&lt;typename T , enable_if_t&lt;!is_vector&lt; T &gt;::value, detail::en
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>description</em> = <code>&quot;&quot;</code>&#160;</td>
+          <td class="paramname"><em>option_description</em> = <code>&quot;&quot;</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1574,8 +1574,8 @@ template&lt;typename T , enable_if_t&lt;!is_vector&lt; T &gt;::value, detail::en
 
 </div>
 </div>
-<a id="a5b0cdb6fa0ac78281df4bcdadafbb752"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5b0cdb6fa0ac78281df4bcdadafbb752">&#9670;&nbsp;</a></span>add_option_function() <span class="overload">[2/2]</span></h2>
+<a id="a5800496fef71aea9322c25e1fc5f1a88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5800496fef71aea9322c25e1fc5f1a88">&#9670;&nbsp;</a></span>add_option_function() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1601,7 +1601,13 @@ template&lt;typename T , enable_if_t&lt; is_vector&lt; T &gt;::value, detail::en
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>description</em> = <code>&quot;&quot;</code>&#160;</td>
+          <td class="paramname"><em>option_description</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>delimiter</em> = <code>'\0'</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1626,8 +1632,8 @@ template&lt;typename T , enable_if_t&lt; is_vector&lt; T &gt;::value, detail::en
 
 </div>
 </div>
-<a id="ac6132aab8480729e3e14a84954cd881a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6132aab8480729e3e14a84954cd881a">&#9670;&nbsp;</a></span>add_set() <span class="overload">[1/2]</span></h2>
+<a id="af004ba90bbb8ba494e2e13d731d87f98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af004ba90bbb8ba494e2e13d731d87f98">&#9670;&nbsp;</a></span>add_set() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1659,7 +1665,7 @@ template&lt;typename T &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>description</em> = <code>&quot;&quot;</code>&#160;</td>
+          <td class="paramname"><em>option_description</em> = <code>&quot;&quot;</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1685,8 +1691,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="ab3266e3b66973b9783cad4403044a8be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab3266e3b66973b9783cad4403044a8be">&#9670;&nbsp;</a></span>add_set() <span class="overload">[2/2]</span></h2>
+<a id="a5371ce3c7ff0e36b2899321aed4d8393"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5371ce3c7ff0e36b2899321aed4d8393">&#9670;&nbsp;</a></span>add_set() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1718,7 +1724,7 @@ template&lt;typename T &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>description</em>, </td>
+          <td class="paramname"><em>option_description</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

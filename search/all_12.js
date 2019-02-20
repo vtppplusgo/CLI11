@@ -10,6 +10,8 @@ var searchData=
   ['title_5f',['title_',['../class_c_l_i_1_1_timer.html#a2e423868378db3b64f6d459a9c820899',1,'CLI::Timer']]],
   ['tname',['tname',['../class_c_l_i_1_1_validator.html#a2396b2b4e4af76793f5cc6d684166680',1,'CLI::Validator']]],
   ['tname_5ffunction',['tname_function',['../class_c_l_i_1_1_validator.html#a5868d2a22ea00376e7db257be8fbab4c',1,'CLI::Validator']]],
+  ['to_5fconfig',['to_config',['../class_c_l_i_1_1_config.html#a516815ecb20f72816caeab5049d0873d',1,'CLI::Config::to_config()'],['../class_c_l_i_1_1_config_i_n_i.html#a19c417345b87de12a00e026b07c17906',1,'CLI::ConfigINI::to_config()']]],
+  ['to_5fflag',['to_flag',['../class_c_l_i_1_1_config.html#affac2102274c1a09c0e08b2c9410b57f',1,'CLI::Config']]],
   ['to_5fstring',['to_string',['../class_c_l_i_1_1_timer.html#a35a7a90b7f96da40dfe4cbfb2f0b4f9e',1,'CLI::Timer']]],
   ['transform',['transform',['../class_c_l_i_1_1_option.html#a55bf2ac860145983d7046f759ad23e14',1,'CLI::Option::transform(const Validator &amp;validator)'],['../class_c_l_i_1_1_option.html#aec424ae8d4baed3d0195bd9cbc521554',1,'CLI::Option::transform(std::function&lt; std::string(std::string)&gt; func)']]],
   ['type_5fname',['type_name',['../class_c_l_i_1_1_option.html#addaddebd60f66aaedc13e5fb473db902',1,'CLI::Option']]],

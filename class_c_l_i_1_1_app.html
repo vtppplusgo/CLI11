@@ -131,7 +131,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memdesc:aa38148af0f7a368e03610a0590fbb406"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the help formatter. <br /></td></tr>
 <tr class="separator:aa38148af0f7a368e03610a0590fbb406"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6f22ec4216f4e44833df281d95cb124"><td class="memItemLeft" align="right" valign="top"><a id="aa6f22ec4216f4e44833df281d95cb124"></a>
-<a class="el" href="class_c_l_i_1_1_app.html">App</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#aa6f22ec4216f4e44833df281d95cb124">config_formatter</a> (std::shared_ptr&lt; Config &gt; fmt)</td></tr>
+<a class="el" href="class_c_l_i_1_1_app.html">App</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#aa6f22ec4216f4e44833df281d95cb124">config_formatter</a> (std::shared_ptr&lt; <a class="el" href="class_c_l_i_1_1_config.html">Config</a> &gt; fmt)</td></tr>
 <tr class="memdesc:aa6f22ec4216f4e44833df281d95cb124"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the config formatter. <br /></td></tr>
 <tr class="separator:aa6f22ec4216f4e44833df281d95cb124"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31f30e3313c5d0d2646556b0e232bbbc"><td class="memItemLeft" align="right" valign="top"><a id="a31f30e3313c5d0d2646556b0e232bbbc"></a>
@@ -333,7 +333,7 @@ std::shared_ptr&lt; <a class="el" href="class_c_l_i_1_1_formatter_base.html">For
 <tr class="memdesc:a342b67dba58e624e7e5aad2274ad53a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the formatter. <br /></td></tr>
 <tr class="separator:a342b67dba58e624e7e5aad2274ad53a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac43ddaae03c02145cccdc268f2e6d38e"><td class="memItemLeft" align="right" valign="top"><a id="ac43ddaae03c02145cccdc268f2e6d38e"></a>
-std::shared_ptr&lt; Config &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#ac43ddaae03c02145cccdc268f2e6d38e">get_config_formatter</a> () const</td></tr>
+std::shared_ptr&lt; <a class="el" href="class_c_l_i_1_1_config.html">Config</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#ac43ddaae03c02145cccdc268f2e6d38e">get_config_formatter</a> () const</td></tr>
 <tr class="memdesc:ac43ddaae03c02145cccdc268f2e6d38e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the config formatter. <br /></td></tr>
 <tr class="separator:ac43ddaae03c02145cccdc268f2e6d38e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7637441b1cd7fb2fcf5e7e095e779a7"><td class="memItemLeft" align="right" valign="top"><a id="ab7637441b1cd7fb2fcf5e7e095e779a7"></a>
@@ -510,10 +510,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a241ba75a6c98b36349ae2f71a9137291">_parse</a> (std::vector&lt; std::string &gt; &amp;args)</td></tr>
 <tr class="memdesc:a241ba75a6c98b36349ae2f71a9137291"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal parse function. <br /></td></tr>
 <tr class="separator:a241ba75a6c98b36349ae2f71a9137291"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee09795046c3b47948e6c2fa45349eca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#aee09795046c3b47948e6c2fa45349eca">_parse_config</a> (std::vector&lt; ConfigItem &gt; &amp;args)</td></tr>
+<tr class="memitem:aee09795046c3b47948e6c2fa45349eca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#aee09795046c3b47948e6c2fa45349eca">_parse_config</a> (std::vector&lt; <a class="el" href="struct_c_l_i_1_1_config_item.html">ConfigItem</a> &gt; &amp;args)</td></tr>
 <tr class="separator:aee09795046c3b47948e6c2fa45349eca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e12f88d40dcccb91121df90a0f42bd6"><td class="memItemLeft" align="right" valign="top"><a id="a9e12f88d40dcccb91121df90a0f42bd6"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a9e12f88d40dcccb91121df90a0f42bd6">_parse_single_config</a> (const ConfigItem &amp;item, size_t level=0)</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a9e12f88d40dcccb91121df90a0f42bd6">_parse_single_config</a> (const <a class="el" href="struct_c_l_i_1_1_config_item.html">ConfigItem</a> &amp;item, size_t level=0)</td></tr>
 <tr class="memdesc:a9e12f88d40dcccb91121df90a0f42bd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill in a single config option. <br /></td></tr>
 <tr class="separator:a9e12f88d40dcccb91121df90a0f42bd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c18493ffbb1ada02822ca19b6d5e624"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a9c18493ffbb1ada02822ca19b6d5e624">_parse_single</a> (std::vector&lt; std::string &gt; &amp;args, bool &amp;positional_only)</td></tr>
@@ -631,7 +631,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:a16180e7605e07c7a3f8e6b458569bc02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the config option. <br /></td></tr>
 <tr class="separator:a16180e7605e07c7a3f8e6b458569bc02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afec4182982dfca15a835ee7b3abf8660"><td class="memItemLeft" align="right" valign="top"><a id="afec4182982dfca15a835ee7b3abf8660"></a>
-std::shared_ptr&lt; Config &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#afec4182982dfca15a835ee7b3abf8660">config_formatter_</a> {new ConfigINI()}</td></tr>
+std::shared_ptr&lt; <a class="el" href="class_c_l_i_1_1_config.html">Config</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#afec4182982dfca15a835ee7b3abf8660">config_formatter_</a> {new <a class="el" href="class_c_l_i_1_1_config_i_n_i.html">ConfigINI</a>()}</td></tr>
 <tr class="memdesc:afec4182982dfca15a835ee7b3abf8660"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the formatter for help printing. Default provided. INHERITABLE (same pointer) <br /></td></tr>
 <tr class="separator:afec4182982dfca15a835ee7b3abf8660"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -787,7 +787,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
         <tr>
           <td class="memname">void CLI::App::_parse_config </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; ConfigItem &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="struct_c_l_i_1_1_config_item.html">ConfigItem</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>args</em></td><td>)</td>
           <td></td>
         </tr>

@@ -1,6 +1,7 @@
 var searchData=
 [
   ['parent_5f',['parent_',['../class_c_l_i_1_1_app.html#a557239f7b3a655d0e0d6be8820f3e043',1,'CLI::App::parent_()'],['../class_c_l_i_1_1_option.html#a9391ef1d3ed3f0607633b36faf72f5c0',1,'CLI::Option::parent_()']]],
+  ['parents',['parents',['../struct_c_l_i_1_1_config_item.html#ae6e0262b6c756e5e662b608613927ccc',1,'CLI::ConfigItem']]],
   ['parse_5forder_5f',['parse_order_',['../class_c_l_i_1_1_app.html#add8dcf3a51639b56a50bf9e1ab983606',1,'CLI::App']]],
   ['parsed_5f',['parsed_',['../class_c_l_i_1_1_app.html#aab697e719c93169aee6a9a211260224c',1,'CLI::App']]],
   ['parsed_5fsubcommands_5f',['parsed_subcommands_',['../class_c_l_i_1_1_app.html#a61eae39a2e5238322d21f6ff31aa6f4b',1,'CLI::App']]],

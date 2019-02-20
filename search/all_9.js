@@ -7,6 +7,7 @@ var searchData=
   ['incorrectconstruction',['IncorrectConstruction',['../class_c_l_i_1_1_incorrect_construction.html',1,'CLI']]],
   ['increment_5fparsed',['increment_parsed',['../class_c_l_i_1_1_app.html#ae8d614e3f5c703216da768dd85d98d8f',1,'CLI::App']]],
   ['introduction',['Introduction',['../index.html',1,'']]],
+  ['inputs',['inputs',['../struct_c_l_i_1_1_config_item.html#a201384703e6509d14bc28de3ef2a2cbc',1,'CLI::ConfigItem']]],
   ['invaliderror',['InvalidError',['../class_c_l_i_1_1_invalid_error.html',1,'CLI']]],
   ['ipv4validator',['IPV4Validator',['../class_c_l_i_1_1detail_1_1_i_p_v4_validator.html',1,'CLI::detail']]],
   ['is_5fbool',['is_bool',['../struct_c_l_i_1_1is__bool.html',1,'CLI']]],

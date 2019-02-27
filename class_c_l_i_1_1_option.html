@@ -284,6 +284,10 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>get_flag_value
 <a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_option.html#a80e429009bbbfd863fba2ebd32e8d391">add_result</a> (std::string s)</td></tr>
 <tr class="memdesc:a80e429009bbbfd863fba2ebd32e8d391"><td class="mdescLeft">&#160;</td><td class="mdescRight">Puts a result at the end. <br /></td></tr>
 <tr class="separator:a80e429009bbbfd863fba2ebd32e8d391"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acab1c784192fd6eac15445e44acfa6e7"><td class="memItemLeft" align="right" valign="top"><a id="acab1c784192fd6eac15445e44acfa6e7"></a>
+<a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_option.html#acab1c784192fd6eac15445e44acfa6e7">add_result</a> (std::string s, int &amp;<a class="el" href="class_c_l_i_1_1_option.html#a993aed7587141cfb742ec5fafd2855fc">count</a>)</td></tr>
+<tr class="memdesc:acab1c784192fd6eac15445e44acfa6e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Puts a result at the end and get a count of the number of arguments actually added. <br /></td></tr>
+<tr class="separator:acab1c784192fd6eac15445e44acfa6e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3730500fa0a855cb11433f7dda723e41"><td class="memItemLeft" align="right" valign="top"><a id="a3730500fa0a855cb11433f7dda723e41"></a>
 <a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_option.html#a3730500fa0a855cb11433f7dda723e41">add_result</a> (std::vector&lt; std::string &gt; s)</td></tr>
 <tr class="memdesc:a3730500fa0a855cb11433f7dda723e41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Puts a result at the end. <br /></td></tr>
@@ -301,50 +305,20 @@ template&lt;typename T , enable_if_t&lt;!is_vector&lt; T &gt;::value &amp;&amp;!
 <tr class="memitem:a251a3c10c556855c236fddbd419709b1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_option.html#a251a3c10c556855c236fddbd419709b1">results</a> (T &amp;output) const</td></tr>
 <tr class="memdesc:a251a3c10c556855c236fddbd419709b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the results as a particular type <br /></td></tr>
 <tr class="separator:a251a3c10c556855c236fddbd419709b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a698ca8c936721f6df3fa189f0aedc26b"><td class="memTemplParams" colspan="2"><a id="a698ca8c936721f6df3fa189f0aedc26b"></a>
+<tr class="memitem:a69caacc1ed71757b37fd16d4ede1eeda"><td class="memTemplParams" colspan="2"><a id="a69caacc1ed71757b37fd16d4ede1eeda"></a>
 template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a698ca8c936721f6df3fa189f0aedc26b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_option.html#a698ca8c936721f6df3fa189f0aedc26b">results</a> (std::vector&lt; T &gt; &amp;output, char delim='\0') const</td></tr>
-<tr class="memdesc:a698ca8c936721f6df3fa189f0aedc26b"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the results as a vector of a particular type <br /></td></tr>
-<tr class="separator:a698ca8c936721f6df3fa189f0aedc26b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d3b964b0d68632908c14b614fee1302"><td class="memTemplParams" colspan="2"><a id="a9d3b964b0d68632908c14b614fee1302"></a>
-template&lt;typename T , enable_if_t&lt;!is_vector&lt; T &gt;::value, detail::enabler &gt;  = detail::dummy&gt; </td></tr>
-<tr class="memitem:a9d3b964b0d68632908c14b614fee1302"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_option.html#a9d3b964b0d68632908c14b614fee1302">as</a> () const</td></tr>
-<tr class="memdesc:a9d3b964b0d68632908c14b614fee1302"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the results as a particular type <br /></td></tr>
-<tr class="separator:a9d3b964b0d68632908c14b614fee1302"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefc63d7f378db854beaf2d1025da19e6"><td class="memTemplParams" colspan="2"><a id="aefc63d7f378db854beaf2d1025da19e6"></a>
-template&lt;typename T , enable_if_t&lt; is_vector&lt; T &gt;::value, detail::enabler &gt;  = detail::dummy&gt; </td></tr>
-<tr class="memitem:aefc63d7f378db854beaf2d1025da19e6"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_option.html#aefc63d7f378db854beaf2d1025da19e6">as</a> (char delim='\0') const</td></tr>
-<tr class="memdesc:aefc63d7f378db854beaf2d1025da19e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the results as a vector of a particular type <br /></td></tr>
-<tr class="separator:aefc63d7f378db854beaf2d1025da19e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69caacc1ed71757b37fd16d4ede1eeda"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_option.html#a69caacc1ed71757b37fd16d4ede1eeda">results</a> (std::vector&lt; T &gt; &amp;output) const</td></tr>
+<tr class="memdesc:a69caacc1ed71757b37fd16d4ede1eeda"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the results as a vector of a particular type <br /></td></tr>
+<tr class="separator:a69caacc1ed71757b37fd16d4ede1eeda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf823105782108a6c777b7e0925d2430"><td class="memTemplParams" colspan="2"><a id="aaf823105782108a6c777b7e0925d2430"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aaf823105782108a6c777b7e0925d2430"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_option.html#aaf823105782108a6c777b7e0925d2430">as</a> () const</td></tr>
+<tr class="memdesc:aaf823105782108a6c777b7e0925d2430"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the results as a particular type <br /></td></tr>
+<tr class="separator:aaf823105782108a6c777b7e0925d2430"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae19e4231b0c1ef14cf2f3c7189e453c"><td class="memItemLeft" align="right" valign="top"><a id="aae19e4231b0c1ef14cf2f3c7189e453c"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_option.html#aae19e4231b0c1ef14cf2f3c7189e453c">get_callback_run</a> () const</td></tr>
 <tr class="memdesc:aae19e4231b0c1ef14cf2f3c7189e453c"><td class="mdescLeft">&#160;</td><td class="mdescRight">See if the callback has been run already. <br /></td></tr>
 <tr class="separator:aae19e4231b0c1ef14cf2f3c7189e453c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Custom options</div></td></tr>
-<tr class="memitem:a08c4fc3c4d254ac57a48d5756626a03c"><td class="memItemLeft" align="right" valign="top"><a id="a08c4fc3c4d254ac57a48d5756626a03c"></a>
-<a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_option.html#a08c4fc3c4d254ac57a48d5756626a03c">type_name_fn</a> (std::function&lt; std::string()&gt; typefun)</td></tr>
-<tr class="memdesc:a08c4fc3c4d254ac57a48d5756626a03c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the type function to run when displayed on this option. <br /></td></tr>
-<tr class="separator:a08c4fc3c4d254ac57a48d5756626a03c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:addaddebd60f66aaedc13e5fb473db902"><td class="memItemLeft" align="right" valign="top"><a id="addaddebd60f66aaedc13e5fb473db902"></a>
-<a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_option.html#addaddebd60f66aaedc13e5fb473db902">type_name</a> (std::string typeval)</td></tr>
-<tr class="memdesc:addaddebd60f66aaedc13e5fb473db902"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a custom option typestring. <br /></td></tr>
-<tr class="separator:addaddebd60f66aaedc13e5fb473db902"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a490eba9b24865845a0715e4566dcb6cc"><td class="memItemLeft" align="right" valign="top"><a id="a490eba9b24865845a0715e4566dcb6cc"></a>
-<a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_option.html#a490eba9b24865845a0715e4566dcb6cc">type_size</a> (int option_type_size)</td></tr>
-<tr class="memdesc:a490eba9b24865845a0715e4566dcb6cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a custom option size. <br /></td></tr>
-<tr class="separator:a490eba9b24865845a0715e4566dcb6cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a446f47a5d6ddf6831defd707394d7c07"><td class="memItemLeft" align="right" valign="top"><a id="a446f47a5d6ddf6831defd707394d7c07"></a>
-<a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_option.html#a446f47a5d6ddf6831defd707394d7c07">default_str</a> (std::string val)</td></tr>
-<tr class="memdesc:a446f47a5d6ddf6831defd707394d7c07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the default value string representation. <br /></td></tr>
-<tr class="separator:a446f47a5d6ddf6831defd707394d7c07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30f91bad482e7f60a70f465722c203c6"><td class="memItemLeft" align="right" valign="top"><a id="a30f91bad482e7f60a70f465722c203c6"></a>
-<a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_option.html#a30f91bad482e7f60a70f465722c203c6">default_val</a> (std::string val)</td></tr>
-<tr class="memdesc:a30f91bad482e7f60a70f465722c203c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the default value string representation and evaluate. <br /></td></tr>
-<tr class="separator:a30f91bad482e7f60a70f465722c203c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b8425827ceb852c3cc3f44b9b1c26a4"><td class="memItemLeft" align="right" valign="top"><a id="a8b8425827ceb852c3cc3f44b9b1c26a4"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_option.html#a8b8425827ceb852c3cc3f44b9b1c26a4">get_type_name</a> () const</td></tr>
-<tr class="memdesc:a8b8425827ceb852c3cc3f44b9b1c26a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the typename for this option. <br /></td></tr>
-<tr class="separator:a8b8425827ceb852c3cc3f44b9b1c26a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_c_l_i_1_1_option_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_c_l_i_1_1_option_base')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_c_l_i_1_1_option_base.html">CLI::OptionBase&lt; Option &gt;</a></td></tr>
 <tr class="memitem:a02b335b9ae22c4253b9850da04f02054 inherit pub_methods_class_c_l_i_1_1_option_base"><td class="memItemLeft" align="right" valign="top"><a id="a02b335b9ae22c4253b9850da04f02054"></a>
 <a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_option_base.html#a02b335b9ae22c4253b9850da04f02054">group</a> (std::string name)</td></tr>
@@ -382,6 +356,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_option_base.html#a07c4e6b7c4a7c3af4e147613d5e39aa0">get_disable_flag_override</a> () const</td></tr>
 <tr class="memdesc:a07c4e6b7c4a7c3af4e147613d5e39aa0 inherit pub_methods_class_c_l_i_1_1_option_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">The status of configurable. <br /></td></tr>
 <tr class="separator:a07c4e6b7c4a7c3af4e147613d5e39aa0 inherit pub_methods_class_c_l_i_1_1_option_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3057f1f7bdd0473d86aad54a0e36064 inherit pub_methods_class_c_l_i_1_1_option_base"><td class="memItemLeft" align="right" valign="top"><a id="ad3057f1f7bdd0473d86aad54a0e36064"></a>
+char&#160;</td><td class="memItemRight" valign="bottom"><b>get_delimiter</b> () const</td></tr>
+<tr class="separator:ad3057f1f7bdd0473d86aad54a0e36064 inherit pub_methods_class_c_l_i_1_1_option_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67ade2fd6f98b5a77c45b18c3d8ae639 inherit pub_methods_class_c_l_i_1_1_option_base"><td class="memItemLeft" align="right" valign="top"><a id="a67ade2fd6f98b5a77c45b18c3d8ae639"></a>
 MultiOptionPolicy&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_option_base.html#a67ade2fd6f98b5a77c45b18c3d8ae639">get_multi_option_policy</a> () const</td></tr>
 <tr class="memdesc:a67ade2fd6f98b5a77c45b18c3d8ae639 inherit pub_methods_class_c_l_i_1_1_option_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">The status of the multi option policy. <br /></td></tr>
@@ -402,6 +379,10 @@ MultiOptionPolicy&#160;</td><td class="memItemRight" valign="bottom"><a class="e
 <a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_option_base.html#affbb9fb4e20744e377767952507503f0">configurable</a> (bool value=true)</td></tr>
 <tr class="memdesc:affbb9fb4e20744e377767952507503f0 inherit pub_methods_class_c_l_i_1_1_option_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow in a configuration file. <br /></td></tr>
 <tr class="separator:affbb9fb4e20744e377767952507503f0 inherit pub_methods_class_c_l_i_1_1_option_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad99f5bd0df1e736cd6c3478a77507289 inherit pub_methods_class_c_l_i_1_1_option_base"><td class="memItemLeft" align="right" valign="top"><a id="ad99f5bd0df1e736cd6c3478a77507289"></a>
+<a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_option_base.html#ad99f5bd0df1e736cd6c3478a77507289">delimiter</a> (char value='\0')</td></tr>
+<tr class="memdesc:ad99f5bd0df1e736cd6c3478a77507289 inherit pub_methods_class_c_l_i_1_1_option_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow in a configuration file. <br /></td></tr>
+<tr class="separator:ad99f5bd0df1e736cd6c3478a77507289 inherit pub_methods_class_c_l_i_1_1_option_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -517,10 +498,41 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_option_base.html#ab62f608c0957e32ccf56f2834aa574c1">disable_flag_override_</a></td></tr>
 <tr class="memdesc:ab62f608c0957e32ccf56f2834aa574c1 inherit pro_attribs_class_c_l_i_1_1_option_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable overriding flag values with '=value'. <br /></td></tr>
 <tr class="separator:ab62f608c0957e32ccf56f2834aa574c1 inherit pro_attribs_class_c_l_i_1_1_option_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4164d93e2b8e59b2de24dad04a9f34b inherit pro_attribs_class_c_l_i_1_1_option_base"><td class="memItemLeft" align="right" valign="top"><a id="ac4164d93e2b8e59b2de24dad04a9f34b"></a>
+char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_option_base.html#ac4164d93e2b8e59b2de24dad04a9f34b">delimiter_</a></td></tr>
+<tr class="memdesc:ac4164d93e2b8e59b2de24dad04a9f34b inherit pro_attribs_class_c_l_i_1_1_option_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify a delimiter character for vector arguments. <br /></td></tr>
+<tr class="separator:ac4164d93e2b8e59b2de24dad04a9f34b inherit pro_attribs_class_c_l_i_1_1_option_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c5483d3c992baad97beed3de2b82b05 inherit pro_attribs_class_c_l_i_1_1_option_base"><td class="memItemLeft" align="right" valign="top"><a id="a2c5483d3c992baad97beed3de2b82b05"></a>
 MultiOptionPolicy&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_option_base.html#a2c5483d3c992baad97beed3de2b82b05">multi_option_policy_</a></td></tr>
 <tr class="memdesc:a2c5483d3c992baad97beed3de2b82b05 inherit pro_attribs_class_c_l_i_1_1_option_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Policy for multiple arguments when <code>expected_ == 1</code> (can be set on bool flags, too) <br /></td></tr>
 <tr class="separator:a2c5483d3c992baad97beed3de2b82b05 inherit pro_attribs_class_c_l_i_1_1_option_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Custom options</h2></td></tr>
+<tr class="memitem:a08c4fc3c4d254ac57a48d5756626a03c"><td class="memItemLeft" align="right" valign="top"><a id="a08c4fc3c4d254ac57a48d5756626a03c"></a>
+<a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_option.html#a08c4fc3c4d254ac57a48d5756626a03c">type_name_fn</a> (std::function&lt; std::string()&gt; typefun)</td></tr>
+<tr class="memdesc:a08c4fc3c4d254ac57a48d5756626a03c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the type function to run when displayed on this option. <br /></td></tr>
+<tr class="separator:a08c4fc3c4d254ac57a48d5756626a03c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addaddebd60f66aaedc13e5fb473db902"><td class="memItemLeft" align="right" valign="top"><a id="addaddebd60f66aaedc13e5fb473db902"></a>
+<a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_option.html#addaddebd60f66aaedc13e5fb473db902">type_name</a> (std::string typeval)</td></tr>
+<tr class="memdesc:addaddebd60f66aaedc13e5fb473db902"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a custom option typestring. <br /></td></tr>
+<tr class="separator:addaddebd60f66aaedc13e5fb473db902"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a490eba9b24865845a0715e4566dcb6cc"><td class="memItemLeft" align="right" valign="top"><a id="a490eba9b24865845a0715e4566dcb6cc"></a>
+<a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_option.html#a490eba9b24865845a0715e4566dcb6cc">type_size</a> (int option_type_size)</td></tr>
+<tr class="memdesc:a490eba9b24865845a0715e4566dcb6cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a custom option size. <br /></td></tr>
+<tr class="separator:a490eba9b24865845a0715e4566dcb6cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a446f47a5d6ddf6831defd707394d7c07"><td class="memItemLeft" align="right" valign="top"><a id="a446f47a5d6ddf6831defd707394d7c07"></a>
+<a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_option.html#a446f47a5d6ddf6831defd707394d7c07">default_str</a> (std::string val)</td></tr>
+<tr class="memdesc:a446f47a5d6ddf6831defd707394d7c07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the default value string representation. <br /></td></tr>
+<tr class="separator:a446f47a5d6ddf6831defd707394d7c07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30f91bad482e7f60a70f465722c203c6"><td class="memItemLeft" align="right" valign="top"><a id="a30f91bad482e7f60a70f465722c203c6"></a>
+<a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_option.html#a30f91bad482e7f60a70f465722c203c6">default_val</a> (std::string val)</td></tr>
+<tr class="memdesc:a30f91bad482e7f60a70f465722c203c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the default value string representation and evaluate. <br /></td></tr>
+<tr class="separator:a30f91bad482e7f60a70f465722c203c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b8425827ceb852c3cc3f44b9b1c26a4"><td class="memItemLeft" align="right" valign="top"><a id="a8b8425827ceb852c3cc3f44b9b1c26a4"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_option.html#a8b8425827ceb852c3cc3f44b9b1c26a4">get_type_name</a> () const</td></tr>
+<tr class="memdesc:a8b8425827ceb852c3cc3f44b9b1c26a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the typename for this option. <br /></td></tr>
+<tr class="separator:a8b8425827ceb852c3cc3f44b9b1c26a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="ad3382914905c3616614ce32e17f688d7"></a>

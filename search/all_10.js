@@ -13,7 +13,7 @@ var searchData=
   ['required_5f',['required_',['../class_c_l_i_1_1_option_base.html#abad838fd3da11f840a40536a279912ac',1,'CLI::OptionBase']]],
   ['requirederror',['RequiredError',['../class_c_l_i_1_1_required_error.html',1,'CLI']]],
   ['requireserror',['RequiresError',['../class_c_l_i_1_1_requires_error.html',1,'CLI']]],
-  ['results',['results',['../class_c_l_i_1_1_option.html#a2cfcf3a7cb89d595518a2af020ac9107',1,'CLI::Option::results() const'],['../class_c_l_i_1_1_option.html#a251a3c10c556855c236fddbd419709b1',1,'CLI::Option::results(T &amp;output) const'],['../class_c_l_i_1_1_option.html#a698ca8c936721f6df3fa189f0aedc26b',1,'CLI::Option::results(std::vector&lt; T &gt; &amp;output, char delim=&apos;\0&apos;) const']]],
+  ['results',['results',['../class_c_l_i_1_1_option.html#a2cfcf3a7cb89d595518a2af020ac9107',1,'CLI::Option::results() const'],['../class_c_l_i_1_1_option.html#a251a3c10c556855c236fddbd419709b1',1,'CLI::Option::results(T &amp;output) const'],['../class_c_l_i_1_1_option.html#a69caacc1ed71757b37fd16d4ede1eeda',1,'CLI::Option::results(std::vector&lt; T &gt; &amp;output) const']]],
   ['results_5f',['results_',['../class_c_l_i_1_1_option.html#af45b214347a715edf92b1e3de5c4b938',1,'CLI::Option']]],
   ['run_5fcallback',['run_callback',['../class_c_l_i_1_1_app.html#a7669340db7d8cbb2eed9ceeb884dd61a',1,'CLI::App::run_callback()'],['../class_c_l_i_1_1_option.html#ab06eb6c31666a4a003aeb2cf3e5cdcd9',1,'CLI::Option::run_callback()']]],
   ['runtimeerror',['RuntimeError',['../class_c_l_i_1_1_runtime_error.html',1,'CLI']]]

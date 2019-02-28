@@ -814,8 +814,8 @@ class Option : public OptionBase<Option> {
     }
 
     /// Puts a result at the end and get a count of the number of arguments actually added
-    Option *add_result(std::string s, int &count) {
-        count = _add_result(std::move(s));
+    Option *add_result(std::string s, int &out_count) {
+        out_count = _add_result(std::move(s));
         callback_run_ = false;
         return this;
     }
@@ -940,24 +940,24 @@ class Option : public OptionBase<Option> {
 
   private:
     int _add_result(std::string &&result) {
-        int count = 0;
+        int icount = 0;
         if(delimiter_ == '\0') {
             results_.push_back(std::move(result));
-            ++count;
+            ++icount;
         } else {
             if((result.find_first_of(delimiter_) != std::string::npos)) {
                 for(const auto &var : CLI::detail::split(result, delimiter_)) {
                     if(!var.empty()) {
                         results_.push_back(var);
-                        ++count;
+                        ++icount;
                     }
                 }
             } else {
                 results_.push_back(std::move(result));
-                ++count;
+                ++icount;
             }
         }
-        return count;
+        return icount;
     }
 };
 

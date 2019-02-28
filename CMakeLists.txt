@@ -2,12 +2,12 @@ cmake_minimum_required(VERSION 3.4)
 # Note: this is a header only library. If you have an older CMake than 3.4,
 # just add the CLI11/include directory and that's all you need to do.
 
-# Make sure users don't get warnings on a tested (3.4 to 3.12) version
+# Make sure users don't get warnings on a tested (3.4 to 3.13) version
 # of CMake. For most of the policies, the new version is better (hence the change).
-if(${CMAKE_VERSION} VERSION_LESS 3.12)
+if(${CMAKE_VERSION} VERSION_LESS 3.13)
     cmake_policy(VERSION ${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION})
 else()
-    cmake_policy(VERSION 3.12)
+    cmake_policy(VERSION 3.13)
 endif()
 
 set(VERSION_REGEX "#define CLI11_VERSION[ \t]+\"(.+)\"")
@@ -36,7 +36,7 @@ if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
     if(MSVC)
         add_definitions("/W4")
     else()
-        add_definitions(-Wall -Wextra -pedantic)
+        add_definitions(-Wall -Wextra -pedantic -Wshadow)
     endif()
 
     if(CMAKE_VERSION VERSION_GREATER 3.6)
@@ -79,8 +79,16 @@ target_include_directories(CLI11 INTERFACE
 # Make add_subdirectory work like find_package
 add_library(CLI11::CLI11 ALIAS CLI11)
 
+option(CLI11_INSTALL "Install the CLI11 folder to include during install process" ${CUR_PROJ})
+
 # This folder should be installed
-install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include/CLI DESTINATION include)
+if(CLI11_INSTALL)
+    install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include/CLI DESTINATION include)
+
+    # Make an export target
+    install(TARGETS CLI11
+            EXPORT CLI11Targets)
+endif()
 
 # Use find_package on the installed package
 # Since we have no custom code, we can directly write this
@@ -95,27 +103,26 @@ write_basic_package_version_file(
     COMPATIBILITY AnyNewerVersion
     )
 
-# Make version available in the install
-install(FILES "${CMAKE_CURRENT_BINARY_DIR}/CLI11ConfigVersion.cmake"
-        DESTINATION lib/cmake/CLI11)
+# These installs only make sense for a local project
+if(CUR_PROJ)
+    # Make version available in the install
+    install(FILES "${CMAKE_CURRENT_BINARY_DIR}/CLI11ConfigVersion.cmake"
+            DESTINATION lib/cmake/CLI11)
 
-# Make an export target
-install(TARGETS CLI11
-        EXPORT CLI11Targets)
+    # Install the export target as a file
+    install(EXPORT CLI11Targets
+            FILE CLI11Config.cmake
+            NAMESPACE CLI11::
+            DESTINATION lib/cmake/CLI11)
 
-# Install the export target as a file
-install(EXPORT CLI11Targets
-        FILE CLI11Config.cmake
-        NAMESPACE CLI11::
-        DESTINATION lib/cmake/CLI11)
+    # Use find_package on the installed package
+    export(TARGETS CLI11
+           NAMESPACE CLI11::
+           FILE CLI11Targets.cmake)
 
-# Use find_package on the installed package
-export(TARGETS CLI11
-       NAMESPACE CLI11::
-       FILE CLI11Targets.cmake)
-
-# Register in the user cmake package registry
-export(PACKAGE CLI11)
+    # Register in the user cmake package registry
+    export(PACKAGE CLI11)
+endif()
 
 option(CLI11_SINGLE_FILE "Generate a single header file" OFF)
 
@@ -149,6 +156,10 @@ endif()
 cmake_dependent_option(CLI11_SINGLE_FILE_TESTS "Duplicate all the tests for a single file build" OFF "CLI11_SINGLE_FILE" OFF)
 
 cmake_dependent_option(CLI11_TESTING "Build the tests and add them" ON "CUR_PROJ" OFF)
+if(DEFINED BUILD_TESTING)
+    cmake_dependent_option(CLI11_TESTING "" ON "BUILD_TESTING" OFF)
+    message(STATUS "BUILD_TESTING is defined and it supersedes CLI11_TESTING. Has forced to ${CLI11_TESTING}")
+endif()
 if(CLI11_TESTING)
     enable_testing()
     add_subdirectory(tests)

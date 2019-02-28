@@ -8,7 +8,7 @@
 
 TEST(Split, SimpleByToken) {
     auto out = CLI::detail::split("one.two.three", '.');
-    ASSERT_EQ((size_t)3, out.size());
+    ASSERT_EQ(3u, out.size());
     EXPECT_EQ("one", out.at(0));
     EXPECT_EQ("two", out.at(1));
     EXPECT_EQ("three", out.at(2));
@@ -16,13 +16,13 @@ TEST(Split, SimpleByToken) {
 
 TEST(Split, Single) {
     auto out = CLI::detail::split("one", '.');
-    ASSERT_EQ((size_t)1, out.size());
+    ASSERT_EQ(1u, out.size());
     EXPECT_EQ("one", out.at(0));
 }
 
 TEST(Split, Empty) {
     auto out = CLI::detail::split("", '.');
-    ASSERT_EQ((size_t)1, out.size());
+    ASSERT_EQ(1u, out.size());
     EXPECT_EQ("", out.at(0));
 }
 
@@ -32,6 +32,54 @@ TEST(String, InvalidName) {
     EXPECT_TRUE(CLI::detail::valid_name_string("va-li-d"));
     EXPECT_FALSE(CLI::detail::valid_name_string("vali&d"));
     EXPECT_TRUE(CLI::detail::valid_name_string("_valid"));
+    EXPECT_FALSE(CLI::detail::valid_name_string("/valid"));
+}
+
+TEST(StringTools, Modify) {
+    int cnt = 0;
+    std::string newString = CLI::detail::find_and_modify("======", "=", [&cnt](std::string &str, size_t index) {
+        if((++cnt) % 2 == 0) {
+            str[index] = ':';
+        }
+        return index + 1;
+    });
+    EXPECT_EQ(newString, "=:=:=:");
+}
+
+TEST(StringTools, Modify2) {
+    std::string newString =
+        CLI::detail::find_and_modify("this is a string test", "is", [](std::string &str, size_t index) {
+            if((index > 1) && (str[index - 1] != ' ')) {
+                str[index] = 'a';
+                str[index + 1] = 't';
+            }
+            return index + 1;
+        });
+    EXPECT_EQ(newString, "that is a string test");
+}
+
+TEST(StringTools, Modify3) {
+    // this picks up 3 sets of 3 after the 'b' then collapses the new first set
+    std::string newString = CLI::detail::find_and_modify("baaaaaaaaaa", "aaa", [](std::string &str, size_t index) {
+        str.erase(index, 3);
+        str.insert(str.begin(), 'a');
+        return 0;
+    });
+    EXPECT_EQ(newString, "aba");
+}
+
+TEST(StringTools, flagValues) {
+    EXPECT_EQ(CLI::detail::to_flag_value("0"), -1);
+    EXPECT_EQ(CLI::detail::to_flag_value("t"), 1);
+    EXPECT_EQ(CLI::detail::to_flag_value("1"), 1);
+    EXPECT_EQ(CLI::detail::to_flag_value("6"), 6);
+    EXPECT_EQ(CLI::detail::to_flag_value("-6"), -6);
+    EXPECT_EQ(CLI::detail::to_flag_value("false"), -1);
+    EXPECT_EQ(CLI::detail::to_flag_value("YES"), 1);
+    EXPECT_THROW(CLI::detail::to_flag_value("frog"), std::invalid_argument);
+    EXPECT_THROW(CLI::detail::to_flag_value("q"), std::invalid_argument);
+    EXPECT_EQ(CLI::detail::to_flag_value("NO"), -1);
+    EXPECT_EQ(CLI::detail::to_flag_value("475555233"), 475555233);
 }
 
 TEST(Trim, Various) {
@@ -155,6 +203,38 @@ TEST(Validators, PathNotExistsDir) {
     EXPECT_NE(CLI::ExistingPath(mydir), "");
 }
 
+TEST(Validators, IPValidate1) {
+    std::string ip = "1.1.1.1";
+    EXPECT_TRUE(CLI::ValidIPV4(ip).empty());
+    ip = "224.255.0.1";
+    EXPECT_TRUE(CLI::ValidIPV4(ip).empty());
+    ip = "-1.255.0.1";
+    EXPECT_FALSE(CLI::ValidIPV4(ip).empty());
+    ip = "1.256.0.1";
+    EXPECT_FALSE(CLI::ValidIPV4(ip).empty());
+    ip = "1.256.0.1";
+    EXPECT_FALSE(CLI::ValidIPV4(ip).empty());
+    ip = "aaa";
+    EXPECT_FALSE(CLI::ValidIPV4(ip).empty());
+    ip = "11.22";
+    EXPECT_FALSE(CLI::ValidIPV4(ip).empty());
+}
+
+TEST(Validators, PositiveValidator) {
+    std::string num = "1.1.1.1";
+    EXPECT_FALSE(CLI::PositiveNumber(num).empty());
+    num = "1";
+    EXPECT_TRUE(CLI::PositiveNumber(num).empty());
+    num = "10000";
+    EXPECT_TRUE(CLI::PositiveNumber(num).empty());
+    num = "0";
+    EXPECT_TRUE(CLI::PositiveNumber(num).empty());
+    num = "-1";
+    EXPECT_FALSE(CLI::PositiveNumber(num).empty());
+    num = "a";
+    EXPECT_FALSE(CLI::PositiveNumber(num).empty());
+}
+
 TEST(Validators, CombinedAndRange) {
     auto crange = CLI::Range(0, 12) & CLI::Range(4, 16);
     EXPECT_TRUE(crange("4").empty());
@@ -210,6 +290,36 @@ TEST(Validators, CombinedPaths) {
 
     std::remove(myfile.c_str());
     EXPECT_FALSE(CLI::ExistingFile(myfile).empty());
+}
+
+TEST(Validators, ProgramNameSplit) {
+    TempFile myfile{"program_name1.exe"};
+    {
+        std::ofstream out{myfile};
+        out << "useless string doesn't matter" << std::endl;
+    }
+    auto res =
+        CLI::detail::split_program_name(std::string("./") + std::string(myfile) + " this is a bunch of extra stuff  ");
+    EXPECT_EQ(res.first, std::string("./") + std::string(myfile));
+    EXPECT_EQ(res.second, "this is a bunch of extra stuff");
+
+    TempFile myfile2{"program name1.exe"};
+    {
+        std::ofstream out{myfile2};
+        out << "useless string doesn't matter" << std::endl;
+    }
+    res = CLI::detail::split_program_name(std::string("   ") + std::string("./") + std::string(myfile2) +
+                                          "      this is a bunch of extra stuff  ");
+    EXPECT_EQ(res.first, std::string("./") + std::string(myfile2));
+    EXPECT_EQ(res.second, "this is a bunch of extra stuff");
+
+    res = CLI::detail::split_program_name("./program_name    this is a bunch of extra stuff  ");
+    EXPECT_EQ(res.first, "./program_name"); // test sectioning of first argument even if it can't detect the file
+    EXPECT_EQ(res.second, "this is a bunch of extra stuff");
+
+    res = CLI::detail::split_program_name(std::string("  ./") + std::string(myfile) + "    ");
+    EXPECT_EQ(res.first, std::string("./") + std::string(myfile));
+    EXPECT_TRUE(res.second.empty());
 }
 
 // Yes, this is testing an app_helper :)
@@ -356,6 +466,20 @@ TEST(SplitUp, Simple) {
     EXPECT_EQ(oput, result);
 }
 
+TEST(SplitUp, SimpleDifferentQuotes) {
+    std::vector<std::string> oput = {"one", "two three"};
+    std::string orig{R"(one `two three`)"};
+    std::vector<std::string> result = CLI::detail::split_up(orig);
+    EXPECT_EQ(oput, result);
+}
+
+TEST(SplitUp, SimpleDifferentQuotes2) {
+    std::vector<std::string> oput = {"one", "two three"};
+    std::string orig{R"(one 'two three')"};
+    std::vector<std::string> result = CLI::detail::split_up(orig);
+    EXPECT_EQ(oput, result);
+}
+
 TEST(SplitUp, Layered) {
     std::vector<std::string> output = {R"(one 'two three')"};
     std::string orig{R"("one 'two three'")"};
@@ -403,6 +527,10 @@ TEST(Types, TypeName) {
 
     std::string text2_name = CLI::detail::type_name<char *>();
     EXPECT_EQ("TEXT", text2_name);
+
+    enum class test { test1, test2, test3 };
+    std::string enum_name = CLI::detail::type_name<test>();
+    EXPECT_EQ("ENUM", enum_name);
 }
 
 TEST(Types, OverflowSmall) {
@@ -458,6 +586,20 @@ TEST(Types, LexicalCastDouble) {
     EXPECT_FALSE(CLI::detail::lexical_cast(extra_input, x));
 }
 
+TEST(Types, LexicalCastBool) {
+    std::string input = "false";
+    bool x;
+    EXPECT_TRUE(CLI::detail::lexical_cast(input, x));
+    EXPECT_FALSE(x);
+
+    std::string bad_input = "happy";
+    EXPECT_FALSE(CLI::detail::lexical_cast(bad_input, x));
+
+    std::string input_true = "EnaBLE";
+    EXPECT_TRUE(CLI::detail::lexical_cast(input_true, x));
+    EXPECT_TRUE(x);
+}
+
 TEST(Types, LexicalCastString) {
     std::string input = "one";
     std::string output;
@@ -477,6 +619,25 @@ TEST(Types, LexicalCastParsable) {
 
     EXPECT_FALSE(CLI::detail::lexical_cast(fail_input, output));
     EXPECT_FALSE(CLI::detail::lexical_cast(extra_input, output));
+}
+
+TEST(Types, LexicalCastEnum) {
+    enum t1 : char { v1 = 5, v3 = 7, v5 = -9 };
+
+    t1 output;
+    EXPECT_TRUE(CLI::detail::lexical_cast("-9", output));
+    EXPECT_EQ(output, v5);
+
+    EXPECT_FALSE(CLI::detail::lexical_cast("invalid", output));
+    enum class t2 : uint64_t { enum1 = 65, enum2 = 45667, enum3 = 9999999999999 };
+    t2 output2;
+    EXPECT_TRUE(CLI::detail::lexical_cast("65", output2));
+    EXPECT_EQ(output2, t2::enum1);
+
+    EXPECT_FALSE(CLI::detail::lexical_cast("invalid", output2));
+
+    EXPECT_TRUE(CLI::detail::lexical_cast("9999999999999", output2));
+    EXPECT_EQ(output2, t2::enum3);
 }
 
 TEST(FixNewLines, BasicCheck) {

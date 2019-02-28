@@ -24,12 +24,12 @@ TEST(StringBased, First) {
 
     std::vector<CLI::ConfigItem> output = CLI::ConfigINI().from_config(ofile);
 
-    EXPECT_EQ((size_t)2, output.size());
+    EXPECT_EQ(2u, output.size());
     EXPECT_EQ("one", output.at(0).name);
-    EXPECT_EQ((size_t)1, output.at(0).inputs.size());
+    EXPECT_EQ(1u, output.at(0).inputs.size());
     EXPECT_EQ("three", output.at(0).inputs.at(0));
     EXPECT_EQ("two", output.at(1).name);
-    EXPECT_EQ((size_t)1, output.at(1).inputs.size());
+    EXPECT_EQ(1u, output.at(1).inputs.size());
     EXPECT_EQ("four", output.at(1).inputs.at(0));
 }
 
@@ -45,12 +45,12 @@ TEST(StringBased, FirstWithComments) {
 
     std::vector<CLI::ConfigItem> output = CLI::ConfigINI().from_config(ofile);
 
-    EXPECT_EQ((size_t)2, output.size());
+    EXPECT_EQ(2u, output.size());
     EXPECT_EQ("one", output.at(0).name);
-    EXPECT_EQ((size_t)1, output.at(0).inputs.size());
+    EXPECT_EQ(1u, output.at(0).inputs.size());
     EXPECT_EQ("three", output.at(0).inputs.at(0));
     EXPECT_EQ("two", output.at(1).name);
-    EXPECT_EQ((size_t)1, output.at(1).inputs.size());
+    EXPECT_EQ(1u, output.at(1).inputs.size());
     EXPECT_EQ("four", output.at(1).inputs.at(0));
 }
 
@@ -65,15 +65,15 @@ TEST(StringBased, Quotes) {
 
     std::vector<CLI::ConfigItem> output = CLI::ConfigINI().from_config(ofile);
 
-    EXPECT_EQ((size_t)3, output.size());
+    EXPECT_EQ(3u, output.size());
     EXPECT_EQ("one", output.at(0).name);
-    EXPECT_EQ((size_t)1, output.at(0).inputs.size());
+    EXPECT_EQ(1u, output.at(0).inputs.size());
     EXPECT_EQ("three", output.at(0).inputs.at(0));
     EXPECT_EQ("two", output.at(1).name);
-    EXPECT_EQ((size_t)1, output.at(1).inputs.size());
+    EXPECT_EQ(1u, output.at(1).inputs.size());
     EXPECT_EQ("four", output.at(1).inputs.at(0));
     EXPECT_EQ("five", output.at(2).name);
-    EXPECT_EQ((size_t)1, output.at(2).inputs.size());
+    EXPECT_EQ(1u, output.at(2).inputs.size());
     EXPECT_EQ("six and seven", output.at(2).inputs.at(0));
 }
 
@@ -88,15 +88,15 @@ TEST(StringBased, Vector) {
 
     std::vector<CLI::ConfigItem> output = CLI::ConfigINI().from_config(ofile);
 
-    EXPECT_EQ((size_t)3, output.size());
+    EXPECT_EQ(3u, output.size());
     EXPECT_EQ("one", output.at(0).name);
-    EXPECT_EQ((size_t)1, output.at(0).inputs.size());
+    EXPECT_EQ(1u, output.at(0).inputs.size());
     EXPECT_EQ("three", output.at(0).inputs.at(0));
     EXPECT_EQ("two", output.at(1).name);
-    EXPECT_EQ((size_t)1, output.at(1).inputs.size());
+    EXPECT_EQ(1u, output.at(1).inputs.size());
     EXPECT_EQ("four", output.at(1).inputs.at(0));
     EXPECT_EQ("five", output.at(2).name);
-    EXPECT_EQ((size_t)3, output.at(2).inputs.size());
+    EXPECT_EQ(3u, output.at(2).inputs.size());
     EXPECT_EQ("six", output.at(2).inputs.at(0));
     EXPECT_EQ("and", output.at(2).inputs.at(1));
     EXPECT_EQ("seven", output.at(2).inputs.at(2));
@@ -112,12 +112,12 @@ TEST(StringBased, Spaces) {
 
     std::vector<CLI::ConfigItem> output = CLI::ConfigINI().from_config(ofile);
 
-    EXPECT_EQ((size_t)2, output.size());
+    EXPECT_EQ(2u, output.size());
     EXPECT_EQ("one", output.at(0).name);
-    EXPECT_EQ((size_t)1, output.at(0).inputs.size());
+    EXPECT_EQ(1u, output.at(0).inputs.size());
     EXPECT_EQ("three", output.at(0).inputs.at(0));
     EXPECT_EQ("two", output.at(1).name);
-    EXPECT_EQ((size_t)1, output.at(1).inputs.size());
+    EXPECT_EQ(1u, output.at(1).inputs.size());
     EXPECT_EQ("four", output.at(1).inputs.at(0));
 }
 
@@ -132,13 +132,13 @@ TEST(StringBased, Sections) {
 
     std::vector<CLI::ConfigItem> output = CLI::ConfigINI().from_config(ofile);
 
-    EXPECT_EQ((size_t)2, output.size());
+    EXPECT_EQ(2u, output.size());
     EXPECT_EQ("one", output.at(0).name);
-    EXPECT_EQ((size_t)1, output.at(0).inputs.size());
+    EXPECT_EQ(1u, output.at(0).inputs.size());
     EXPECT_EQ("three", output.at(0).inputs.at(0));
     EXPECT_EQ("two", output.at(1).name);
     EXPECT_EQ("second", output.at(1).parents.at(0));
-    EXPECT_EQ((size_t)1, output.at(1).inputs.size());
+    EXPECT_EQ(1u, output.at(1).inputs.size());
     EXPECT_EQ("four", output.at(1).inputs.at(0));
     EXPECT_EQ("second.two", output.at(1).fullname());
 }
@@ -156,14 +156,14 @@ TEST(StringBased, SpacesSections) {
 
     std::vector<CLI::ConfigItem> output = CLI::ConfigINI().from_config(ofile);
 
-    EXPECT_EQ((size_t)2, output.size());
+    EXPECT_EQ(2u, output.size());
     EXPECT_EQ("one", output.at(0).name);
-    EXPECT_EQ((size_t)1, output.at(0).inputs.size());
+    EXPECT_EQ(1u, output.at(0).inputs.size());
     EXPECT_EQ("three", output.at(0).inputs.at(0));
     EXPECT_EQ("two", output.at(1).name);
-    EXPECT_EQ((size_t)1, output.at(1).parents.size());
+    EXPECT_EQ(1u, output.at(1).parents.size());
     EXPECT_EQ("second", output.at(1).parents.at(0));
-    EXPECT_EQ((size_t)1, output.at(1).inputs.size());
+    EXPECT_EQ(1u, output.at(1).inputs.size());
     EXPECT_EQ("four", output.at(1).inputs.at(0));
 }
 
@@ -256,7 +256,7 @@ TEST_F(TApp, IniGetNoRemaining) {
     int two = 0;
     app.add_option("--two", two);
     ASSERT_NO_THROW(run());
-    EXPECT_EQ(app.remaining().size(), (size_t)0);
+    EXPECT_EQ(app.remaining().size(), 0u);
 }
 
 TEST_F(TApp, IniNotRequiredNotDefault) {
@@ -516,8 +516,13 @@ TEST_F(TApp, IniFlagConvertFailure) {
         std::ofstream out{tmpini};
         out << "flag=moobook" << std::endl;
     }
-
-    EXPECT_THROW(run(), CLI::ConversionError);
+    run();
+    bool result;
+    auto *opt = app.get_option("--flag");
+    EXPECT_THROW(opt->results(result), CLI::ConversionError);
+    std::string res;
+    opt->results(res);
+    EXPECT_EQ(res, "moobook");
 }
 
 TEST_F(TApp, IniFlagNumbers) {
@@ -603,9 +608,110 @@ TEST_F(TApp, IniFlags) {
     run();
 
     EXPECT_EQ(2, two);
-    EXPECT_EQ(true, three);
-    EXPECT_EQ(true, four);
-    EXPECT_EQ(true, five);
+    EXPECT_TRUE(three);
+    EXPECT_TRUE(four);
+    EXPECT_TRUE(five);
+}
+
+TEST_F(TApp, IniFalseFlags) {
+    TempFile tmpini{"TestIniTmp.ini"};
+    app.set_config("--config", tmpini);
+
+    {
+        std::ofstream out{tmpini};
+        out << "[default]" << std::endl;
+        out << "two=-2" << std::endl;
+        out << "three=false" << std::endl;
+        out << "four=1" << std::endl;
+        out << "five" << std::endl;
+    }
+
+    int two;
+    bool three, four, five;
+    app.add_flag("--two", two);
+    app.add_flag("--three", three);
+    app.add_flag("--four", four);
+    app.add_flag("--five", five);
+
+    run();
+
+    EXPECT_EQ(-2, two);
+    EXPECT_FALSE(three);
+    EXPECT_TRUE(four);
+    EXPECT_TRUE(five);
+}
+
+TEST_F(TApp, IniFalseFlagsDef) {
+    TempFile tmpini{"TestIniTmp.ini"};
+    app.set_config("--config", tmpini);
+
+    {
+        std::ofstream out{tmpini};
+        out << "[default]" << std::endl;
+        out << "two=2" << std::endl;
+        out << "three=true" << std::endl;
+        out << "four=on" << std::endl;
+        out << "five" << std::endl;
+    }
+
+    int two;
+    bool three, four, five;
+    app.add_flag("--two{false}", two);
+    app.add_flag("--three", three);
+    app.add_flag("!--four", four);
+    app.add_flag("--five", five);
+
+    run();
+
+    EXPECT_EQ(-2, two);
+    EXPECT_TRUE(three);
+    EXPECT_FALSE(four);
+    EXPECT_TRUE(five);
+}
+
+TEST_F(TApp, IniFalseFlagsDefDisableOverrideError) {
+    TempFile tmpini{"TestIniTmp.ini"};
+    app.set_config("--config", tmpini);
+
+    {
+        std::ofstream out{tmpini};
+        out << "[default]" << std::endl;
+        out << "two=2" << std::endl;
+        out << "four=on" << std::endl;
+        out << "five" << std::endl;
+    }
+
+    int two;
+    bool four, five;
+    app.add_flag("--two{false}", two)->disable_flag_override();
+    app.add_flag("!--four", four);
+    app.add_flag("--five", five);
+
+    EXPECT_THROW(run(), CLI::ArgumentMismatch);
+}
+
+TEST_F(TApp, IniFalseFlagsDefDisableOverrideSuccess) {
+    TempFile tmpini{"TestIniTmp.ini"};
+    app.set_config("--config", tmpini);
+
+    {
+        std::ofstream out{tmpini};
+        out << "[default]" << std::endl;
+        out << "two=2" << std::endl;
+        out << "four={}" << std::endl;
+        out << "val=15" << std::endl;
+    }
+
+    int two, four, val;
+    app.add_flag("--two{2}", two)->disable_flag_override();
+    app.add_flag("--four{4}", four)->disable_flag_override();
+    app.add_flag("--val", val);
+
+    run();
+
+    EXPECT_EQ(2, two);
+    EXPECT_EQ(4, four);
+    EXPECT_EQ(15, val);
 }
 
 TEST_F(TApp, IniOutputSimple) {
@@ -637,7 +743,7 @@ TEST_F(TApp, IniOutputNoConfigurable) {
 
 TEST_F(TApp, IniOutputShortSingleDescription) {
     std::string flag = "some_flag";
-    std::string description = "Some short description.";
+    const std::string description = "Some short description.";
     app.add_flag("--" + flag, description);
 
     run();
@@ -649,8 +755,8 @@ TEST_F(TApp, IniOutputShortSingleDescription) {
 TEST_F(TApp, IniOutputShortDoubleDescription) {
     std::string flag1 = "flagnr1";
     std::string flag2 = "flagnr2";
-    std::string description1 = "First description.";
-    std::string description2 = "Second description.";
+    const std::string description1 = "First description.";
+    const std::string description2 = "Second description.";
     app.add_flag("--" + flag1, description1);
     app.add_flag("--" + flag2, description2);
 
@@ -662,7 +768,7 @@ TEST_F(TApp, IniOutputShortDoubleDescription) {
 
 TEST_F(TApp, IniOutputMultiLineDescription) {
     std::string flag = "some_flag";
-    std::string description = "Some short description.\nThat has lines.";
+    const std::string description = "Some short description.\nThat has lines.";
     app.add_flag("--" + flag, description);
 
     run();
@@ -711,7 +817,7 @@ TEST_F(TApp, IniOutputFlag) {
 TEST_F(TApp, IniOutputSet) {
 
     int v;
-    app.add_set("--simple", v, {1, 2, 3});
+    app.add_option("--simple", v)->check(CLI::IsMember({1, 2, 3}));
 
     args = {"--simple=2"};
 
@@ -765,6 +871,21 @@ TEST_F(TApp, IniQuotedOutput) {
     EXPECT_EQ("I am a \"confusing\" string", val2);
 
     std::string str = app.config_to_str();
+    EXPECT_THAT(str, HasSubstr("val1=\"I am a string\""));
+    EXPECT_THAT(str, HasSubstr("val2='I am a \"confusing\" string'"));
+}
+
+TEST_F(TApp, DefaultsIniQuotedOutput) {
+
+    std::string val1{"I am a string"};
+    app.add_option("--val1", val1, "", true);
+
+    std::string val2{R"(I am a "confusing" string)"};
+    app.add_option("--val2", val2, "", true);
+
+    run();
+
+    std::string str = app.config_to_str(true);
     EXPECT_THAT(str, HasSubstr("val1=\"I am a string\""));
     EXPECT_THAT(str, HasSubstr("val2='I am a \"confusing\" string'"));
 }

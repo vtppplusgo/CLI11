@@ -26,6 +26,7 @@ set(CLI11_TESTS
     IniTest
     SimpleTest
     AppTest
+    SetTest
     CreationTest
     SubcommandTest
     HelpTest
@@ -33,6 +34,8 @@ set(CLI11_TESTS
     NewParseTest
     OptionalTest
     DeprecatedTest
+    StringParseTest
+    TrueFalseTest
     )
 
 if(WIN32)
@@ -107,11 +110,15 @@ file(WRITE "${PROJECT_BINARY_DIR}/CTestCustom.cmake"
     )
 
 # Add boost to test boost::optional if available
-find_package(Boost 1.58)
+find_package(Boost 1.61)
 if(Boost_FOUND)
-    target_link_libraries(informational PUBLIC Boost::boost)
-    target_link_libraries(OptionalTest PUBLIC Boost::boost)
-
+    if(TARGET Boost::boost)
+        target_link_libraries(informational PUBLIC Boost::boost)
+        target_link_libraries(OptionalTest PUBLIC Boost::boost)
+    else()
+        target_include_directories(informational PUBLIC ${Boost_INCLUDE_DIRS})
+        target_include_directories(OptionalTest PUBLIC ${Boost_INCLUDE_DIRS})
+    endif()
     # Enforce Boost::Optional even if __has_include is missing on your compiler
     target_compile_definitions(informational PUBLIC CLI11_BOOST_OPTIONAL)
     target_compile_definitions(OptionalTest PUBLIC CLI11_BOOST_OPTIONAL)

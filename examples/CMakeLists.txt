@@ -63,6 +63,24 @@ set_property(TEST subcommands_all PROPERTY PASS_REGULAR_EXPRESSION
     "Subcommand: start"
     "Subcommand: stop")
 
+add_cli_exe(subcom_partitioned subcom_partitioned.cpp)
+add_test(NAME subcom_partitioned_none COMMAND subcom_partitioned)
+set_property(TEST subcom_partitioned_none PROPERTY PASS_REGULAR_EXPRESSION
+    "This is a timer:"
+    "--file is required"
+    "Run with --help for more information.")
+add_test(NAME subcom_partitioned_all COMMAND subcom_partitioned --file this --count --count -d 1.2)
+set_property(TEST subcom_partitioned_all PROPERTY PASS_REGULAR_EXPRESSION
+    "This is a timer:"
+    "Working on file: this, direct count: 1, opt count: 1"
+    "Working on count: 2, direct count: 2, opt count: 2"
+    "Some value: 1.2")
+    # test shows that the help prints out for unnamed subcommands
+add_test(NAME subcom_partitioned_help COMMAND subcom_partitioned --help)
+set_property(TEST subcom_partitioned_help PROPERTY PASS_REGULAR_EXPRESSION
+    "-f,--file TEXT REQUIRED"
+    "-d,--double FLOAT")
+
 add_cli_exe(validators validators.cpp)
 add_test(NAME validators_help COMMAND validators --help)
 set_property(TEST validators_help PROPERTY PASS_REGULAR_EXPRESSION
@@ -112,7 +130,12 @@ add_cli_exe(enum enum.cpp)
 add_test(NAME enum_pass COMMAND enum -l 1)
 add_test(NAME enum_fail COMMAND enum -l 4)
 set_property(TEST enum_fail PROPERTY PASS_REGULAR_EXPRESSION
-    "Could not convert: --level = 4")
+    "--level: 4 not in {High,Medium,Low} | 4 not in {0,1,2}")
+
+add_cli_exe(digit_args digit_args.cpp)
+add_test(NAME digit_args COMMAND digit_args -h)
+set_property(TEST digit_args PROPERTY PASS_REGULAR_EXPRESSION
+    "-3{3}")
 
 add_cli_exe(modhelp modhelp.cpp)
 add_test(NAME modhelp COMMAND modhelp -a test -h)
@@ -126,3 +149,9 @@ set_property(TEST subcom_in_files PROPERTY PASS_REGULAR_EXPRESSION
     "Using foo!")
 
 add_cli_exe(formatter formatter.cpp)
+
+add_cli_exe(nested nested.cpp)
+
+add_cli_exe(subcom_help subcom_help.cpp)
+add_test(NAME subcom_help_normal COMMAND subcom_help sub --help)
+add_test(NAME subcom_help_reversed COMMAND subcom_help --help sub)

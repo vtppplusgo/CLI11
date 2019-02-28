@@ -83,6 +83,25 @@ TEST(Formatter, OptCustomizeSimple) {
               "  --opt INT (MUST HAVE)  Something\n");
 }
 
+TEST(Formatter, FalseFlagExample) {
+    CLI::App app{"My prog"};
+
+    app.get_formatter()->column_width(25);
+    app.get_formatter()->label("REQUIRED", "(MUST HAVE)");
+
+    int v;
+    app.add_flag("--opt,!--no_opt", v, "Something");
+
+    bool flag;
+    app.add_flag("!-O,--opt2,--no_opt2{false}", flag, "Something else");
+
+    std::string help = app.help();
+
+    EXPECT_THAT(help, HasSubstr("--no_opt{false}"));
+    EXPECT_THAT(help, HasSubstr("--no_opt2{false}"));
+    EXPECT_THAT(help, HasSubstr("-O{false}"));
+}
+
 TEST(Formatter, AppCustomize) {
     CLI::App app{"My prog"};
     app.add_subcommand("subcom1", "This");
@@ -133,4 +152,31 @@ TEST(Formatter, AllSub) {
     std::string help = app.help("", CLI::AppFormatMode::All);
     EXPECT_THAT(help, HasSubstr("--insub"));
     EXPECT_THAT(help, HasSubstr("subcom"));
+}
+
+TEST(Formatter, NamelessSub) {
+    CLI::App app{"My prog"};
+    CLI::App *sub = app.add_subcommand("", "This subcommand");
+    sub->add_flag("--insub", "MyFlag");
+
+    std::string help = app.help("", CLI::AppFormatMode::Normal);
+    EXPECT_THAT(help, HasSubstr("--insub"));
+    EXPECT_THAT(help, HasSubstr("This subcommand"));
+}
+
+TEST(Formatter, NamelessSubInGroup) {
+    CLI::App app{"My prog"};
+    CLI::App *sub = app.add_subcommand("", "This subcommand");
+    CLI::App *sub2 = app.add_subcommand("sub2", "subcommand2");
+    sub->add_flag("--insub", "MyFlag");
+    int val;
+    sub2->add_option("pos", val, "positional");
+    sub->group("group1");
+    sub2->group("group1");
+    std::string help = app.help("", CLI::AppFormatMode::Normal);
+    EXPECT_THAT(help, HasSubstr("--insub"));
+    EXPECT_THAT(help, HasSubstr("This subcommand"));
+    EXPECT_THAT(help, HasSubstr("group1"));
+    EXPECT_THAT(help, HasSubstr("sub2"));
+    EXPECT_TRUE(help.find("pos") == std::string::npos);
 }

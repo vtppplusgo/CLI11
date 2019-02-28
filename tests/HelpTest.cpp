@@ -237,6 +237,27 @@ TEST(THelp, ManualSetters) {
     EXPECT_THAT(help, HasSubstr("=14"));
 }
 
+TEST(THelp, ManualSetterOverFunction) {
+
+    CLI::App app{"My prog"};
+
+    int x = 1;
+
+    CLI::Option *op1 = app.add_option("--op1", x)->check(CLI::IsMember({1, 2}));
+    CLI::Option *op2 = app.add_option("--op2", x)->transform(CLI::IsMember({1, 2}));
+    op1->default_str("12");
+    op1->type_name("BIGGLES");
+    op2->type_name("QUIGGLES");
+    EXPECT_EQ(x, 1);
+
+    std::string help = app.help();
+
+    EXPECT_THAT(help, HasSubstr("=12"));
+    EXPECT_THAT(help, HasSubstr("BIGGLES"));
+    EXPECT_THAT(help, HasSubstr("QUIGGLES"));
+    EXPECT_THAT(help, Not(HasSubstr("1,2")));
+}
+
 TEST(THelp, Subcom) {
     CLI::App app{"My prog"};
 
@@ -280,7 +301,7 @@ TEST(THelp, IntDefaults) {
 
     int one{1}, two{2};
     app.add_option("--one", one, "Help for one", true);
-    app.add_set("--set", two, {2, 3, 4}, "Help for set", true);
+    app.add_option("--set", two, "Help for set", true)->check(CLI::IsMember({2, 3, 4}));
 
     std::string help = app.help();
 
@@ -295,7 +316,7 @@ TEST(THelp, SetLower) {
     CLI::App app{"My prog"};
 
     std::string def{"One"};
-    app.add_set_ignore_case("--set", def, {"oNe", "twO", "THREE"}, "Help for set", true);
+    app.add_option("--set", def, "Help for set", true)->check(CLI::IsMember({"oNe", "twO", "THREE"}));
 
     std::string help = app.help();
 
@@ -348,6 +369,49 @@ TEST(THelp, RemoveHelp) {
     EXPECT_THAT(help, HasSubstr("Usage:"));
 
     std::vector<std::string> input{"--help"};
+    try {
+        app.parse(input);
+    } catch(const CLI::ParseError &e) {
+        EXPECT_EQ(static_cast<int>(CLI::ExitCodes::ExtrasError), e.get_exit_code());
+    }
+}
+
+TEST(THelp, RemoveOtherMethodHelp) {
+    CLI::App app{"My prog"};
+
+    // Don't do this. Just in case, let's make sure it works.
+    app.remove_option(const_cast<CLI::Option *>(app.get_help_ptr()));
+
+    std::string help = app.help();
+
+    EXPECT_THAT(help, HasSubstr("My prog"));
+    EXPECT_THAT(help, Not(HasSubstr("-h,--help")));
+    EXPECT_THAT(help, Not(HasSubstr("Options:")));
+    EXPECT_THAT(help, HasSubstr("Usage:"));
+
+    std::vector<std::string> input{"--help"};
+    try {
+        app.parse(input);
+    } catch(const CLI::ParseError &e) {
+        EXPECT_EQ(static_cast<int>(CLI::ExitCodes::ExtrasError), e.get_exit_code());
+    }
+}
+
+TEST(THelp, RemoveOtherMethodHelpAll) {
+    CLI::App app{"My prog"};
+
+    app.set_help_all_flag("--help-all");
+    // Don't do this. Just in case, let's make sure it works.
+    app.remove_option(const_cast<CLI::Option *>(app.get_help_all_ptr()));
+
+    std::string help = app.help();
+
+    EXPECT_THAT(help, HasSubstr("My prog"));
+    EXPECT_THAT(help, Not(HasSubstr("--help-all")));
+    EXPECT_THAT(help, HasSubstr("Options:"));
+    EXPECT_THAT(help, HasSubstr("Usage:"));
+
+    std::vector<std::string> input{"--help-all"};
     try {
         app.parse(input);
     } catch(const CLI::ParseError &e) {
@@ -511,10 +575,11 @@ TEST_F(CapturedHelp, CallForAllHelpOutput) {
               "  --help-all                  Help all\n"
               "\n"
               "Subcommands:\n"
-              "one -> One description\n"
+              "one\n"
+              "  One description\n\n"
               "two\n"
-              "Options:\n"
-              "  --three                     \n");
+              "  Options:\n"
+              "    --three                     \n\n");
 }
 TEST_F(CapturedHelp, NewFormattedHelp) {
     app.formatter_fn([](const CLI::App *, std::string, CLI::AppFormatMode) { return "New Help"; });
@@ -527,6 +592,34 @@ TEST_F(CapturedHelp, NormalError) {
     EXPECT_EQ(run(CLI::ExtrasError({"Thing"})), static_cast<int>(CLI::ExitCodes::ExtrasError));
     EXPECT_EQ(out.str(), "");
     EXPECT_THAT(err.str(), HasSubstr("for more information"));
+    EXPECT_THAT(err.str(), Not(HasSubstr("ExtrasError")));
+    EXPECT_THAT(err.str(), HasSubstr("Thing"));
+    EXPECT_THAT(err.str(), Not(HasSubstr(" or ")));
+    EXPECT_THAT(err.str(), Not(HasSubstr("Usage")));
+}
+
+TEST_F(CapturedHelp, DoubleError) {
+    app.set_help_all_flag("--help-all");
+    EXPECT_EQ(run(CLI::ExtrasError({"Thing"})), static_cast<int>(CLI::ExitCodes::ExtrasError));
+    EXPECT_EQ(out.str(), "");
+    EXPECT_THAT(err.str(), HasSubstr("for more information"));
+    EXPECT_THAT(err.str(), HasSubstr(" --help "));
+    EXPECT_THAT(err.str(), HasSubstr(" --help-all "));
+    EXPECT_THAT(err.str(), HasSubstr(" or "));
+    EXPECT_THAT(err.str(), Not(HasSubstr("ExtrasError")));
+    EXPECT_THAT(err.str(), HasSubstr("Thing"));
+    EXPECT_THAT(err.str(), Not(HasSubstr("Usage")));
+}
+
+TEST_F(CapturedHelp, AllOnlyError) {
+    app.set_help_all_flag("--help-all");
+    app.set_help_flag();
+    EXPECT_EQ(run(CLI::ExtrasError({"Thing"})), static_cast<int>(CLI::ExitCodes::ExtrasError));
+    EXPECT_EQ(out.str(), "");
+    EXPECT_THAT(err.str(), HasSubstr("for more information"));
+    EXPECT_THAT(err.str(), Not(HasSubstr(" --help ")));
+    EXPECT_THAT(err.str(), HasSubstr(" --help-all "));
+    EXPECT_THAT(err.str(), Not(HasSubstr(" or ")));
     EXPECT_THAT(err.str(), Not(HasSubstr("ExtrasError")));
     EXPECT_THAT(err.str(), HasSubstr("Thing"));
     EXPECT_THAT(err.str(), Not(HasSubstr("Usage")));
@@ -571,6 +664,35 @@ TEST(THelp, AccessDescription) {
     CLI::App app{"My description goes here"};
 
     EXPECT_EQ(app.get_description(), "My description goes here");
+}
+
+TEST(THelp, SetDescriptionAfterCreation) {
+    CLI::App app{""};
+
+    app.description("My description goes here");
+
+    EXPECT_EQ(app.get_description(), "My description goes here");
+    EXPECT_THAT(app.help(), HasSubstr("My description goes here"));
+}
+
+TEST(THelp, AccessOptionDescription) {
+    CLI::App app{};
+
+    int x;
+    auto opt = app.add_option("-a,--alpha", x, "My description goes here");
+
+    EXPECT_EQ(opt->get_description(), "My description goes here");
+}
+
+TEST(THelp, SetOptionDescriptionAfterCreation) {
+    CLI::App app{};
+
+    int x;
+    auto opt = app.add_option("-a,--alpha", x);
+    opt->description("My description goes here");
+
+    EXPECT_EQ(opt->get_description(), "My description goes here");
+    EXPECT_THAT(app.help(), HasSubstr("My description goes here"));
 }
 
 TEST(THelp, CleanNeeds) {
@@ -688,13 +810,26 @@ TEST(THelp, CombinedValidatorsPathyText) {
     EXPECT_THAT(help, HasSubstr("PATH"));
 }
 
+// Don't do this in real life, please (and transform does nothing here)
+TEST(THelp, CombinedValidatorsPathyTextAsTransform) {
+    CLI::App app;
+
+    std::string filename;
+    app.add_option("--f1", filename)->transform(CLI::ExistingPath | CLI::NonexistentPath);
+
+    // Combining validators with the same type string is OK
+    std::string help = app.help();
+    EXPECT_THAT(help, Not(HasSubstr("TEXT")));
+    EXPECT_THAT(help, HasSubstr("PATH"));
+}
+
 // #113 Part 2
 TEST(THelp, ChangingSet) {
     CLI::App app;
 
     std::set<int> vals{1, 2, 3};
     int val;
-    app.add_set("--val", val, vals);
+    app.add_option("--val", val)->check(CLI::IsMember(&vals));
 
     std::string help = app.help();
 
@@ -715,7 +850,7 @@ TEST(THelp, ChangingSetDefaulted) {
 
     std::set<int> vals{1, 2, 3};
     int val = 2;
-    app.add_set("--val", val, vals, "", true);
+    app.add_option("--val", val, "", true)->check(CLI::IsMember(&vals));
 
     std::string help = app.help();
 
@@ -735,7 +870,7 @@ TEST(THelp, ChangingCaselessSet) {
 
     std::set<std::string> vals{"1", "2", "3"};
     std::string val;
-    app.add_set_ignore_case("--val", val, vals);
+    app.add_option("--val", val)->check(CLI::IsMember(&vals, CLI::ignore_case));
 
     std::string help = app.help();
 
@@ -756,7 +891,7 @@ TEST(THelp, ChangingCaselessSetDefaulted) {
 
     std::set<std::string> vals{"1", "2", "3"};
     std::string val = "2";
-    app.add_set_ignore_case("--val", val, vals, "", true);
+    app.add_option("--val", val, "", true)->check(CLI::IsMember(&vals, CLI::ignore_case));
 
     std::string help = app.help();
 

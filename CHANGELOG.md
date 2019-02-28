@@ -1,4 +1,124 @@
+## Version 1.8: Sets and Flags (IN PROGRESS)
+
+Set handling has been completely replaced by a new backend that works as a Validator. This provides a single interface instead of the 16 different functions in App. It also allows ordered collections to be used, custom functions for filtering, and better help and error messages. You can also use a collection of pairs (like `std::map`) to transform the match into an output. Also new are inverted flags, which can cancel or reduce the count of flags, and can also support general flag types. A new `add_option_fn` lets you more easily program CLI11 options with the types you choose. Vector options now support a custom separator. Apps can now be composed with unnamed subcommand support.
+
+* New `CLI::IsMember` validator replaces set validation [#222]
+* IsMember also supports container of pairs, transform allows modification of result [#228]
+* Much more powerful flags with different values [#211], general types [#235]
+* `add_option` now supports bool due to unified bool handling [#211]
+* Support for composable unnamed subcommands [#216]
+* Custom vector separator using `->delimiter(char)` [#209], [#221], [#240]
+* Validators added for IP4 addresses and positive numbers [#210]
+* Minimum required Boost for optional Optionals has been corrected to 1.61 [#226]
+* Positionals can stop options from being parsed with `app.positionals_at_end()` [#223]
+* Validators can be negated with `!` [#230], and now handle tname functions [#228]
+* Better enum support and streaming helper [#233] and [#228]
+* Cleanup for shadow warnings [#232]
+
+> ### Converting from CLI11 1.7:
+>
+> * `app.add_set("--name", value, {"choice1", "choice2"})` should become `app.add_option("--name", value)->check(CLI::IsMember({"choice1", "choice2"}))`
+> * The `_ignore_case` version of this can be replaced by adding `CLI::ignore_case` to the argument list in `IsMember`
+> * The `_ignore_underscore` version of this can be replaced by adding `CLI::ignore_underscore` to the argument list in `IsMember`
+> * The `_ignore_case_underscore` version of this can be replaced by adding both functions listed above to the argument list in `IsMember`
+> * If you want an exact match to the original choice after one of the modifier functions matches, use `->transform` instead of `->check`
+> * The `_mutable` versions of this can be replaced by passing a pointer or shared pointer into `IsMember`
+> * An error with sets now produces a `ValidationError` instead of a `ConversionError`
+
+[#209]: https://github.com/CLIUtils/CLI11/pull/209
+[#210]: https://github.com/CLIUtils/CLI11/pull/210
+[#211]: https://github.com/CLIUtils/CLI11/pull/211
+[#216]: https://github.com/CLIUtils/CLI11/pull/216
+[#221]: https://github.com/CLIUtils/CLI11/pull/221
+[#222]: https://github.com/CLIUtils/CLI11/pull/222
+[#223]: https://github.com/CLIUtils/CLI11/pull/223
+[#226]: https://github.com/CLIUtils/CLI11/pull/226
+[#228]: https://github.com/CLIUtils/CLI11/pull/228
+[#230]: https://github.com/CLIUtils/CLI11/pull/230
+[#232]: https://github.com/CLIUtils/CLI11/pull/232
+[#233]: https://github.com/CLIUtils/CLI11/pull/233
+[#235]: https://github.com/CLIUtils/CLI11/pull/235
+[#240]: https://github.com/CLIUtils/CLI11/pull/240
+
+
+## Version 1.7.1: Quick patch
+
+This version provides a quick patch for a (correct) warning from GCC 8 for the windows options code.
+
+
+* Fix for Windows style option parsing [#201]
+* Improve `add_subcommand` when throwing an exception [#204]
+* Better metadata for Conan package [#202]
+
+[#201]: https://github.com/CLIUtils/CLI11/pull/201
+[#202]: https://github.com/CLIUtils/CLI11/pull/202
+[#204]: https://github.com/CLIUtils/CLI11/pull/204
+
+## Version 1.7: Parse breakup
+
+The parsing procedure now maps much more sensibly to complex, nested subcommand structures. Each phase of the parsing happens on all subcommands before moving on with the next phase of the parse. This allows several features, like required environment variables, to work properly even through subcommand boundaries.
+Passing the same subcommand multiple times is better supported. Several new features were added as well, including Windows style option support, parsing strings directly, and ignoring underscores in names. Adding a set that you plan to change later must now be done with `add_mutable_set`.
+
+* Support Windows style options with `->allow_windows_style_options`. [#187] On by default on Windows. [#190]
+* Added `parse(string)` to split up and parse a command-line style string directly. [#186]
+* Added `ignore_underscore` and related functions, to ignore underscores when matching names. [#185]
+* The default INI Config will now add quotes to strings with spaces [#195]
+* The default message now will mention the help-all flag also if present [#197]
+* Added `->description` to set Option descriptions [#199]
+* Mutating sets (introduced in Version 1.6) now have a clear add method, `add_mutable_set*`, since the set reference should not expire [#200]
+* Subcommands now track how many times they were parsed in a parsing process. `count()` with no arguments will return the number of times a subcommand was encountered. [#179]
+* Parsing is now done in phases: `shortcurcuits`, `ini`, `env`, `callbacks`, and `requirements`; all subcommands complete a phase before moving on. [#179]
+* Calling parse multiple times is now officially supported without `clear` (automatic). [#179]
+* Dropped the mostly undocumented `short_circuit` property, as help flag parsing is a bit more complex, and the default callback behavior of options now works properly. [#179]
+* Use the standard `BUILD_TESTING` over `CLI11_TESTING` if defined (`CLI11_TESTING` may eventually be removed) [#183]
+* Cleanup warnings [#191]
+* Remove deprecated names: `set_footer`, `set_name`, `set_callback`, and `set_type_name`. Use without the `set_` instead. [#192]
+
+> ### Converting from CLI11 1.6:
+>
+> * `->short_circuit()` is no longer needed, just remove it if you were using it - raising an exception will happen in the proper place now without it.
+> * `->add_set*` becomes `->add_mutable_set*` if you were using the editable set feature
+> * `footer`, `name`, `callback`, and `type_name` must be used instead of the `set_*` versions (deprecated previously).
+
+[#179]: https://github.com/CLIUtils/CLI11/pull/179
+[#183]: https://github.com/CLIUtils/CLI11/pull/183
+[#185]: https://github.com/CLIUtils/CLI11/pull/185
+[#186]: https://github.com/CLIUtils/CLI11/pull/186
+[#187]: https://github.com/CLIUtils/CLI11/pull/187
+[#190]: https://github.com/CLIUtils/CLI11/pull/190
+[#191]: https://github.com/CLIUtils/CLI11/pull/191
+[#192]: https://github.com/CLIUtils/CLI11/pull/192
+[#197]: https://github.com/CLIUtils/CLI11/pull/197
+[#195]: https://github.com/CLIUtils/CLI11/issues/195
+[#199]: https://github.com/CLIUtils/CLI11/pull/199
+[#200]: https://github.com/CLIUtils/CLI11/pull/200
+
+## Version 1.6.2: Help-all
+
+This version fixes some formatting bugs with help-all. It also adds fixes for several warnings, including an experimental optional error on Clang 7. Several smaller fixes.
+
+* Fixed help-all formatting [#163]
+    * Printing help-all on nested command now fixed (App)
+    * Missing space after help-all restored (Default formatter)
+    * More detail printed on help all (Default formatter)
+    * Help-all subcommands get indented with inner blank lines removed (Default formatter)
+    * `detail::find_and_replace` added to utilities
+* Fixed CMake install as subproject with `CLI11_INSTALL` flag. [#156]
+* Fixed warning about local variable hiding class member with MSVC [#157]
+* Fixed compile error with default settings on Clang 7 and libc++ [#158]
+* Fixed special case of `--help` on subcommands (general fix planned for 1.7) [#168]
+* Removing an option with links  [#179]
+
+[#156]: https://github.com/CLIUtils/CLI11/issues/156
+[#157]: https://github.com/CLIUtils/CLI11/issues/157
+[#158]: https://github.com/CLIUtils/CLI11/issues/158
+[#163]: https://github.com/CLIUtils/CLI11/pull/163
+[#168]: https://github.com/CLIUtils/CLI11/issues/168
+[#179]: https://github.com/CLIUtils/CLI11/pull/179
+
+
 ## Version 1.6.1: Platform fixes
+
 This version provides a few fixes for special cases, such as mixing with `Windows.h` and better defaults
 for systems like Hunter. The one new feature is the ability to produce "branded" single file output for
 providing custom namespaces or custom macro names.
@@ -71,7 +191,7 @@ Other changes:
 
 Backend and testing changes:
 
-* Internally, `type_name` is now a lambda function; for sets, this reads the set live. [#116] 
+* Internally, `type_name` is now a lambda function; for sets, this reads the set live. [#116]
 * Cleaner tests without `app.reset()` (and `reset` is now `clear`). [#141]
 * Better CMake policy handling. [#110]
 * Includes are properly sorted. [#120]
@@ -167,7 +287,7 @@ This version adds lots of smaller fixes and additions after the refactor in vers
 * Added `ExistingPath` validator  [#73]
 * `app.allow_ini_extras()` added to allow extras in INI files [#70]
 * Multiline INI comments now supported
-* Descriptions can now be written with `config_to_str` [#66] 
+* Descriptions can now be written with `config_to_str` [#66]
 * Double printing of error message fixed [#77]
 * Renamed `requires` to `needs` to avoid C++20 keyword [#75], [#82]
 * MakeSingleHeader now works if outside of git [#78]
@@ -206,7 +326,7 @@ favorite CLI programs. Error messages and help messages are better and more flex
 * Footers can be added to help [#42](https://github.com/CLIUtils/CLI11/pull/42)
 * Help flags are easier to customize [#43](https://github.com/CLIUtils/CLI11/pull/43)
 * Subcommand now support groups [#46](https://github.com/CLIUtils/CLI11/pull/46)
-* `CLI::RuntimeError` added, for easy exit with error codes [#45](https://github.com/CLIUtils/CLI11/pull/45) 
+* `CLI::RuntimeError` added, for easy exit with error codes [#45](https://github.com/CLIUtils/CLI11/pull/45)
 * The clang-format script is now no longer "hidden" [#48](https://github.com/CLIUtils/CLI11/pull/48)
 * The order is now preserved for subcommands (list and callbacks) [#49](https://github.com/CLIUtils/CLI11/pull/49)
 * Tests now run individually, utilizing CMake 3.10 additions if possible [#50](https://github.com/CLIUtils/CLI11/pull/50)
@@ -223,7 +343,7 @@ favorite CLI programs. Error messages and help messages are better and more flex
 * Allow options to be disabled from INI file, rename `add_config` to `set_config` [#60](https://github.com/CLIUtils/CLI11/pull/60)
 
 > ### Converting from CLI11 1.2:
-> 
+>
 > * `app.parse` no longer returns a vector. Instead, use `app.remaining(true)`.
 > * `"hidden"` is no longer a special group name, instead use `""`
 > * Validators API has changed to return an error string; use `.empty()` to get the old bool back
@@ -248,8 +368,8 @@ This release focuses on making CLI11 behave properly in corner cases, and with c
 This release incorporates feedback from the release announcement. The examples are slowly being expanded, some corner cases improved, and some new functionality for tricky parsing situations.
 
 * Added simple support for enumerations, allow non-printable objects [#12](https://github.com/CLIUtils/CLI11/issues/12)
-* Added `app.parse_order()` with original parse order ([#13](https://github.com/CLIUtils/CLI11/issues/13), [#16](https://github.com/CLIUtils/CLI11/pull/16)) 
-* Added `prefix_command()`, which is like `allow_extras` but instantly stops and returns. ([#8](https://github.com/CLIUtils/CLI11/issues/8), [#17](https://github.com/CLIUtils/CLI11/pull/17)) 
+* Added `app.parse_order()` with original parse order ([#13](https://github.com/CLIUtils/CLI11/issues/13), [#16](https://github.com/CLIUtils/CLI11/pull/16))
+* Added `prefix_command()`, which is like `allow_extras` but instantly stops and returns. ([#8](https://github.com/CLIUtils/CLI11/issues/8), [#17](https://github.com/CLIUtils/CLI11/pull/17))
 * Removed Windows warning ([#10](https://github.com/CLIUtils/CLI11/issues/10), [#20](https://github.com/CLIUtils/CLI11/pull/20))
 * Some improvements to CMake, detect Python and no dependencies on Python 2 (like Python 3) ([#18](https://github.com/CLIUtils/CLI11/issues/18), [#21](https://github.com/CLIUtils/CLI11/pull/21))
 

@@ -27,10 +27,10 @@ inline std::string ini_join(std::vector<std::string> args) {
         auto it = std::find_if(arg.begin(), arg.end(), [](char ch) { return std::isspace<char>(ch, std::locale()); });
         if(it == arg.end())
             s << arg;
-        else if(arg.find(R"(")") == std::string::npos)
-            s << R"(")" << arg << R"(")";
+        else if(arg.find_first_of('\"') == std::string::npos)
+            s << '\"' << arg << '\"';
         else
-            s << R"(')" << arg << R"(')";
+            s << '\'' << arg << '\'';
     }
 
     return s.str();
@@ -69,27 +69,12 @@ class Config {
     /// Convert a configuration into an app
     virtual std::vector<ConfigItem> from_config(std::istream &) const = 0;
 
-    /// Convert a flag to a bool
-    virtual std::vector<std::string> to_flag(const ConfigItem &item) const {
+    /// Get a flag value
+    virtual std::string to_flag(const ConfigItem &item) const {
         if(item.inputs.size() == 1) {
-            std::string val = item.inputs.at(0);
-            val = detail::to_lower(val);
-
-            if(val == "true" || val == "on" || val == "yes") {
-                return std::vector<std::string>(1);
-            } else if(val == "false" || val == "off" || val == "no") {
-                return std::vector<std::string>();
-            } else {
-                try {
-                    size_t ui = std::stoul(val);
-                    return std::vector<std::string>(ui);
-                } catch(const std::invalid_argument &) {
-                    throw ConversionError::TrueFalse(item.fullname());
-                }
-            }
-        } else {
-            throw ConversionError::TooManyInputsFlag(item.fullname());
+            return item.inputs.at(0);
         }
+        throw ConversionError::TooManyInputsFlag(item.fullname());
     }
 
     /// Parse a config file, throw an error (ParseError:ConfigParseError or FileError) on failure
@@ -101,7 +86,7 @@ class Config {
         return from_config(input);
     }
 
-    /// virtual destructor
+    /// Virtual destructor
     virtual ~Config() = default;
 };
 
@@ -117,7 +102,7 @@ class ConfigINI : public Config {
         std::vector<ConfigItem> output;
 
         while(getline(input, line)) {
-            std::vector<std::string> items;
+            std::vector<std::string> items_buffer;
 
             detail::trim(line);
             size_t len = line.length();
@@ -132,10 +117,10 @@ class ConfigINI : public Config {
                 if(pos != std::string::npos) {
                     out.name = detail::trim_copy(line.substr(0, pos));
                     std::string item = detail::trim_copy(line.substr(pos + 1));
-                    items = detail::split_up(item);
+                    items_buffer = detail::split_up(item);
                 } else {
                     out.name = detail::trim_copy(line);
-                    items = {"ON"};
+                    items_buffer = {"ON"};
                 }
 
                 if(detail::to_lower(section) != "default") {
@@ -149,7 +134,7 @@ class ConfigINI : public Config {
                     out.parents.insert(out.parents.end(), plist.begin(), plist.end());
                 }
 
-                out.inputs.insert(std::end(out.inputs), std::begin(items), std::end(items));
+                out.inputs.insert(std::end(out.inputs), std::begin(items_buffer), std::end(items_buffer));
             }
         }
         return output;

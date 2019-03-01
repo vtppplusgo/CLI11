@@ -31,6 +31,7 @@ var searchData=
   ['conversionerror',['ConversionError',['../class_c_l_i_1_1_conversion_error.html',1,'CLI']]],
   ['copy_5fto',['copy_to',['../class_c_l_i_1_1_option_base.html#aeccfd835475420d963f2fff446c32003',1,'CLI::OptionBase']]],
   ['count',['count',['../class_c_l_i_1_1_app.html#a2feb3edca5976f946c2366c1f0a2444c',1,'CLI::App::count() const'],['../class_c_l_i_1_1_app.html#a10179e5015cfd9a821bcdbf2dbbf4f5c',1,'CLI::App::count(std::string option_name) const'],['../class_c_l_i_1_1_option.html#a993aed7587141cfb742ec5fafd2855fc',1,'CLI::Option::count()']]],
+  ['count_5fall',['count_all',['../class_c_l_i_1_1_app.html#ab736d2d33bb0597d58e535fa4cdaf93e',1,'CLI::App']]],
   ['cycles',['cycles',['../class_c_l_i_1_1_timer.html#ac638b2bebe4ea9f2f1d7e1a8e9d6a78c',1,'CLI::Timer']]],
   ['enums',['enums',['../namespace_c_l_i_1_1enums.html',1,'CLI']]]
 ];

@@ -67,6 +67,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="class_c_l_i_1_1_app-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -78,9 +79,22 @@ $(function() {
  <a href="class_c_l_i_1_1_app.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_app_8hpp_source.html">App.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for CLI::App:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_c_l_i_1_1_app.png" usemap="#CLI::App_map" alt=""/>
+  <map id="CLI::App_map" name="CLI::App_map">
+<area href="class_c_l_i_1_1_option__group.html" title="Extension of App to better manage groups of options." alt="CLI::Option_group" shape="rect" coords="0,56,114,80"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:aaabfb31d7fb10ee7465716b948b376dc"><td class="memItemLeft" align="right" valign="top"><a id="aaabfb31d7fb10ee7465716b948b376dc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#aaabfb31d7fb10ee7465716b948b376dc">_move_option</a> (<a class="el" href="class_c_l_i_1_1_option.html">Option</a> *opt, <a class="el" href="class_c_l_i_1_1_app.html">App</a> *app)</td></tr>
+<tr class="memdesc:aaabfb31d7fb10ee7465716b948b376dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">function that could be used by subclasses of <a class="el" href="class_c_l_i_1_1_app.html" title="Creates a command line program, with very few defaults.">App</a> to shift options around into subcommands <br /></td></tr>
+<tr class="separator:aaabfb31d7fb10ee7465716b948b376dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Basic</div></td></tr>
 <tr class="memitem:a61fe9472ef81b1503159511bb8e76430"><td class="memItemLeft" align="right" valign="top"><a id="a61fe9472ef81b1503159511bb8e76430"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a61fe9472ef81b1503159511bb8e76430">App</a> (std::string app_description=&quot;&quot;, std::string app_name=&quot;&quot;)</td></tr>
@@ -100,6 +114,14 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <a class="el" href="class_c_l_i_1_1_app.html">App</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a4a9c762c56b6ff0f5b3505bcb75d0bbe">allow_extras</a> (bool allow=true)</td></tr>
 <tr class="memdesc:a4a9c762c56b6ff0f5b3505bcb75d0bbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the error when extras are left over on the command line. <br /></td></tr>
 <tr class="separator:a4a9c762c56b6ff0f5b3505bcb75d0bbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33c3eb125a4e70d387dd9fc49c25432b"><td class="memItemLeft" align="right" valign="top"><a id="a33c3eb125a4e70d387dd9fc49c25432b"></a>
+<a class="el" href="class_c_l_i_1_1_app.html">App</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a33c3eb125a4e70d387dd9fc49c25432b">required</a> (bool require=true)</td></tr>
+<tr class="memdesc:a33c3eb125a4e70d387dd9fc49c25432b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the error when extras are left over on the command line. <br /></td></tr>
+<tr class="separator:a33c3eb125a4e70d387dd9fc49c25432b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abafac323b1dac58044509a62938daa9a"><td class="memItemLeft" align="right" valign="top"><a id="abafac323b1dac58044509a62938daa9a"></a>
+<a class="el" href="class_c_l_i_1_1_app.html">App</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#abafac323b1dac58044509a62938daa9a">disabled</a> (bool disable=true)</td></tr>
+<tr class="memdesc:abafac323b1dac58044509a62938daa9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable the subcommand or option group. <br /></td></tr>
+<tr class="separator:abafac323b1dac58044509a62938daa9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab79c8db4726b90b6fef32998b56931df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_l_i_1_1_app.html">App</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#ab79c8db4726b90b6fef32998b56931df">allow_config_extras</a> (bool allow=true)</td></tr>
 <tr class="separator:ab79c8db4726b90b6fef32998b56931df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8c668b5d28db6faed5716ab8feeb6ad"><td class="memItemLeft" align="right" valign="top"><a id="ab8c668b5d28db6faed5716ab8feeb6ad"></a>
@@ -175,6 +197,8 @@ CLI::App_p&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 <tr class="separator:a4b5075daadca7c1f7aa1781bc3c9024f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2feb3edca5976f946c2366c1f0a2444c"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a2feb3edca5976f946c2366c1f0a2444c">count</a> () const</td></tr>
 <tr class="separator:a2feb3edca5976f946c2366c1f0a2444c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab736d2d33bb0597d58e535fa4cdaf93e"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#ab736d2d33bb0597d58e535fa4cdaf93e">count_all</a> () const</td></tr>
+<tr class="separator:ab736d2d33bb0597d58e535fa4cdaf93e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a190faa07c199753e02dec21652cfc611"><td class="memItemLeft" align="right" valign="top"><a id="a190faa07c199753e02dec21652cfc611"></a>
 <a class="el" href="class_c_l_i_1_1_app.html">App</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a190faa07c199753e02dec21652cfc611">group</a> (std::string group_name)</td></tr>
 <tr class="memdesc:a190faa07c199753e02dec21652cfc611"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the group membership. <br /></td></tr>
@@ -187,6 +211,14 @@ CLI::App_p&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 <tr class="separator:ae1bb42a7f768d636671552cb345f2d6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07b1b36c8362df966ba8f16428b1e7da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_l_i_1_1_app.html">App</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a07b1b36c8362df966ba8f16428b1e7da">require_subcommand</a> (size_t min, size_t max)</td></tr>
 <tr class="separator:a07b1b36c8362df966ba8f16428b1e7da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad77cd2ce39f74e6bd871d05f377d8cc8"><td class="memItemLeft" align="right" valign="top"><a id="ad77cd2ce39f74e6bd871d05f377d8cc8"></a>
+<a class="el" href="class_c_l_i_1_1_app.html">App</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#ad77cd2ce39f74e6bd871d05f377d8cc8">require_option</a> ()</td></tr>
+<tr class="memdesc:ad77cd2ce39f74e6bd871d05f377d8cc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The argumentless form of require option requires 1 or more options be used. <br /></td></tr>
+<tr class="separator:ad77cd2ce39f74e6bd871d05f377d8cc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6003073a5ae4904cb27a978282363e99"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_l_i_1_1_app.html">App</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a6003073a5ae4904cb27a978282363e99">require_option</a> (int value)</td></tr>
+<tr class="separator:a6003073a5ae4904cb27a978282363e99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33f21d3dd734f24fe796923580b6e29f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_l_i_1_1_app.html">App</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a33f21d3dd734f24fe796923580b6e29f">require_option</a> (size_t min, size_t max)</td></tr>
+<tr class="separator:a33f21d3dd734f24fe796923580b6e29f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e32bb0c9270c996488cc8dfa28ec8b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_l_i_1_1_app.html">App</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a2e32bb0c9270c996488cc8dfa28ec8b1">fallthrough</a> (bool value=true)</td></tr>
 <tr class="separator:a2e32bb0c9270c996488cc8dfa28ec8b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91720aaf4c92c867dc042c723503b74e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a91720aaf4c92c867dc042c723503b74e">operator bool</a> () const</td></tr>
@@ -213,6 +245,22 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a5afd7a600223bae58b46aaff670e2d25">got_subcommand</a> (std::string subcommand_name) const</td></tr>
 <tr class="memdesc:a5afd7a600223bae58b46aaff670e2d25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check with name instead of pointer to see if subcommand was selected. <br /></td></tr>
 <tr class="separator:a5afd7a600223bae58b46aaff670e2d25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8af6e58e767ec987d5ca0ee9fad16b9"><td class="memItemLeft" align="right" valign="top"><a id="af8af6e58e767ec987d5ca0ee9fad16b9"></a>
+<a class="el" href="class_c_l_i_1_1_app.html">App</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#af8af6e58e767ec987d5ca0ee9fad16b9">excludes</a> (<a class="el" href="class_c_l_i_1_1_option.html">Option</a> *opt)</td></tr>
+<tr class="memdesc:af8af6e58e767ec987d5ca0ee9fad16b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets excluded options for the subcommand. <br /></td></tr>
+<tr class="separator:af8af6e58e767ec987d5ca0ee9fad16b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ccf4cf49a8e221507a56224a353b860"><td class="memItemLeft" align="right" valign="top"><a id="a4ccf4cf49a8e221507a56224a353b860"></a>
+<a class="el" href="class_c_l_i_1_1_app.html">App</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a4ccf4cf49a8e221507a56224a353b860">excludes</a> (<a class="el" href="class_c_l_i_1_1_app.html">App</a> *app)</td></tr>
+<tr class="memdesc:a4ccf4cf49a8e221507a56224a353b860"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets excluded subcommands for the subcommand. <br /></td></tr>
+<tr class="separator:a4ccf4cf49a8e221507a56224a353b860"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ea4153f3081d8424e772254135237fd"><td class="memItemLeft" align="right" valign="top"><a id="a9ea4153f3081d8424e772254135237fd"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a9ea4153f3081d8424e772254135237fd">remove_excludes</a> (<a class="el" href="class_c_l_i_1_1_option.html">Option</a> *opt)</td></tr>
+<tr class="memdesc:a9ea4153f3081d8424e772254135237fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes an option from the excludes list of this subcommand. <br /></td></tr>
+<tr class="separator:a9ea4153f3081d8424e772254135237fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c0670f27afe97a4e7ba12fcfb65a81c"><td class="memItemLeft" align="right" valign="top"><a id="a1c0670f27afe97a4e7ba12fcfb65a81c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a1c0670f27afe97a4e7ba12fcfb65a81c">remove_excludes</a> (<a class="el" href="class_c_l_i_1_1_app.html">App</a> *app)</td></tr>
+<tr class="memdesc:a1c0670f27afe97a4e7ba12fcfb65a81c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a subcommand from this excludes list of this subcommand. <br /></td></tr>
+<tr class="separator:a1c0670f27afe97a4e7ba12fcfb65a81c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Getters</div></td></tr>
 <tr class="memitem:a342b67dba58e624e7e5aad2274ad53a3"><td class="memItemLeft" align="right" valign="top"><a id="a342b67dba58e624e7e5aad2274ad53a3"></a>
 std::shared_ptr&lt; <a class="el" href="class_c_l_i_1_1_formatter_base.html">FormatterBase</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a342b67dba58e624e7e5aad2274ad53a3">get_formatter</a> () const</td></tr>
@@ -294,6 +342,14 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a39733300bce0979edef87f39f421d6f2">get_require_subcommand_max</a> () const</td></tr>
 <tr class="memdesc:a39733300bce0979edef87f39f421d6f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the required max subcommand value. <br /></td></tr>
 <tr class="separator:a39733300bce0979edef87f39f421d6f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b34690a73a4841fda8f0ac87b2d3c94"><td class="memItemLeft" align="right" valign="top"><a id="a1b34690a73a4841fda8f0ac87b2d3c94"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a1b34690a73a4841fda8f0ac87b2d3c94">get_require_option_min</a> () const</td></tr>
+<tr class="memdesc:a1b34690a73a4841fda8f0ac87b2d3c94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the required min option value. <br /></td></tr>
+<tr class="separator:a1b34690a73a4841fda8f0ac87b2d3c94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf727d43a7d71983c46eb40004fa78a1"><td class="memItemLeft" align="right" valign="top"><a id="acf727d43a7d71983c46eb40004fa78a1"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#acf727d43a7d71983c46eb40004fa78a1">get_require_option_max</a> () const</td></tr>
+<tr class="memdesc:acf727d43a7d71983c46eb40004fa78a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the required max option value. <br /></td></tr>
+<tr class="separator:acf727d43a7d71983c46eb40004fa78a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60e3e9d4198e855cd721887502acca54"><td class="memItemLeft" align="right" valign="top"><a id="a60e3e9d4198e855cd721887502acca54"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a60e3e9d4198e855cd721887502acca54">get_prefix_command</a> () const</td></tr>
 <tr class="memdesc:a60e3e9d4198e855cd721887502acca54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the prefix command status. <br /></td></tr>
@@ -302,6 +358,14 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a82efdb6d3d77d2faff51a4960034a133">get_allow_extras</a> () const</td></tr>
 <tr class="memdesc:a82efdb6d3d77d2faff51a4960034a133"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the status of allow extras. <br /></td></tr>
 <tr class="separator:a82efdb6d3d77d2faff51a4960034a133"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74fa8829acfe2311724ecad5bdb91dce"><td class="memItemLeft" align="right" valign="top"><a id="a74fa8829acfe2311724ecad5bdb91dce"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a74fa8829acfe2311724ecad5bdb91dce">get_required</a> () const</td></tr>
+<tr class="memdesc:a74fa8829acfe2311724ecad5bdb91dce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the status of required. <br /></td></tr>
+<tr class="separator:a74fa8829acfe2311724ecad5bdb91dce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a770812d1989ce390b1919080d55a65d3"><td class="memItemLeft" align="right" valign="top"><a id="a770812d1989ce390b1919080d55a65d3"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a770812d1989ce390b1919080d55a65d3">get_disabled</a> () const</td></tr>
+<tr class="memdesc:a770812d1989ce390b1919080d55a65d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the status of required. <br /></td></tr>
+<tr class="separator:a770812d1989ce390b1919080d55a65d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d65ae4bfe40b6592b5c408f26b90acb"><td class="memItemLeft" align="right" valign="top"><a id="a5d65ae4bfe40b6592b5c408f26b90acb"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a5d65ae4bfe40b6592b5c408f26b90acb">get_allow_config_extras</a> () const</td></tr>
 <tr class="memdesc:a5d65ae4bfe40b6592b5c408f26b90acb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the status of allow extras. <br /></td></tr>
@@ -338,6 +402,10 @@ const <a class="el" href="class_c_l_i_1_1_app.html">App</a> *&#160;</td><td clas
 std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a4b40e301840ec5d6f99129e6d0a0b2e9">get_name</a> () const</td></tr>
 <tr class="memdesc:a4b40e301840ec5d6f99129e6d0a0b2e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the name of the current app. <br /></td></tr>
 <tr class="separator:a4b40e301840ec5d6f99129e6d0a0b2e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae29f7783c9d8725a6262b1f025f6a4d4"><td class="memItemLeft" align="right" valign="top"><a id="ae29f7783c9d8725a6262b1f025f6a4d4"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#ae29f7783c9d8725a6262b1f025f6a4d4">get_display_name</a> () const</td></tr>
+<tr class="memdesc:ae29f7783c9d8725a6262b1f025f6a4d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a display name for an app. <br /></td></tr>
+<tr class="separator:ae29f7783c9d8725a6262b1f025f6a4d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ba6eb33f3ee9cd1a126385fa44f2c16"><td class="memItemLeft" align="right" valign="top"><a id="a3ba6eb33f3ee9cd1a126385fa44f2c16"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a3ba6eb33f3ee9cd1a126385fa44f2c16">check_name</a> (std::string name_to_check) const</td></tr>
 <tr class="memdesc:a3ba6eb33f3ee9cd1a126385fa44f2c16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check the name, case insensitive and underscore insensitive if set. <br /></td></tr>
@@ -420,10 +488,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:a9e12f88d40dcccb91121df90a0f42bd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c18493ffbb1ada02822ca19b6d5e624"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a9c18493ffbb1ada02822ca19b6d5e624">_parse_single</a> (std::vector&lt; std::string &gt; &amp;args, bool &amp;positional_only)</td></tr>
 <tr class="separator:a9c18493ffbb1ada02822ca19b6d5e624"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a3bf4bd1d3c6bb1af002eda19265767"><td class="memItemLeft" align="right" valign="top"><a id="a7a3bf4bd1d3c6bb1af002eda19265767"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a7a3bf4bd1d3c6bb1af002eda19265767">_count_remaining_positionals</a> (bool required=false) const</td></tr>
-<tr class="memdesc:a7a3bf4bd1d3c6bb1af002eda19265767"><td class="mdescLeft">&#160;</td><td class="mdescRight">Count the required remaining positional arguments. <br /></td></tr>
-<tr class="separator:a7a3bf4bd1d3c6bb1af002eda19265767"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b51f0ac549a6d6033108dd7c33a7de9"><td class="memItemLeft" align="right" valign="top"><a id="a1b51f0ac549a6d6033108dd7c33a7de9"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a1b51f0ac549a6d6033108dd7c33a7de9">_count_remaining_positionals</a> (bool required_only=false) const</td></tr>
+<tr class="memdesc:a1b51f0ac549a6d6033108dd7c33a7de9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Count the required remaining positional arguments. <br /></td></tr>
+<tr class="separator:a1b51f0ac549a6d6033108dd7c33a7de9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a737881acf2e03c6d316b14fd6d8a5073"><td class="memItemLeft" align="right" valign="top"><a id="a737881acf2e03c6d316b14fd6d8a5073"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a737881acf2e03c6d316b14fd6d8a5073">_parse_positional</a> (std::vector&lt; std::string &gt; &amp;args)</td></tr>
 <tr class="memdesc:a737881acf2e03c6d316b14fd6d8a5073"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a positional, go up the tree to check. <br /></td></tr>
@@ -460,8 +528,16 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:ad9ad6cc617a88525ee966a7d49c6331e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76fcdccb7d70b6104b59390195f80112"><td class="memItemLeft" align="right" valign="top"><a id="a76fcdccb7d70b6104b59390195f80112"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a76fcdccb7d70b6104b59390195f80112">has_automatic_name_</a> {false}</td></tr>
-<tr class="memdesc:a76fcdccb7d70b6104b59390195f80112"><td class="mdescLeft">&#160;</td><td class="mdescRight">if set to true the name was automatically generated from the command line vs a user set name <br /></td></tr>
+<tr class="memdesc:a76fcdccb7d70b6104b59390195f80112"><td class="mdescLeft">&#160;</td><td class="mdescRight">If set to true the name was automatically generated from the command line vs a user set name. <br /></td></tr>
 <tr class="separator:a76fcdccb7d70b6104b59390195f80112"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42e3309983fe836cd26df3d1aadf08d6"><td class="memItemLeft" align="right" valign="top"><a id="a42e3309983fe836cd26df3d1aadf08d6"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a42e3309983fe836cd26df3d1aadf08d6">required_</a> {false}</td></tr>
+<tr class="memdesc:a42e3309983fe836cd26df3d1aadf08d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">If set to true the subcommand is required to be processed and used, ignored for main app. <br /></td></tr>
+<tr class="separator:a42e3309983fe836cd26df3d1aadf08d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a405d0642ba4245a6ea61b230c4854667"><td class="memItemLeft" align="right" valign="top"><a id="a405d0642ba4245a6ea61b230c4854667"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a405d0642ba4245a6ea61b230c4854667">disabled_</a> {false}</td></tr>
+<tr class="memdesc:a405d0642ba4245a6ea61b230c4854667"><td class="mdescLeft">&#160;</td><td class="mdescRight">If set to true the subcommand is disabled and cannot be used, ignored for main app. <br /></td></tr>
+<tr class="separator:a405d0642ba4245a6ea61b230c4854667"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6eee1d50b3b940e01398e6d542ed8a8e"><td class="memItemLeft" align="right" valign="top"><a id="a6eee1d50b3b940e01398e6d542ed8a8e"></a>
 std::function&lt; void()&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a6eee1d50b3b940e01398e6d542ed8a8e">callback_</a></td></tr>
 <tr class="memdesc:a6eee1d50b3b940e01398e6d542ed8a8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a function that runs when complete. Great for subcommands. Can throw. <br /></td></tr>
@@ -515,6 +591,14 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a589037cefd16351fd980e38984f2898c">require_subcommand_max_</a> = 0</td></tr>
 <tr class="memdesc:a589037cefd16351fd980e38984f2898c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max number of subcommands allowed (parsing stops after this number). 0 is unlimited INHERITABLE. <br /></td></tr>
 <tr class="separator:a589037cefd16351fd980e38984f2898c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d216b892f18729610234ee8b562a352"><td class="memItemLeft" align="right" valign="top"><a id="a8d216b892f18729610234ee8b562a352"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a8d216b892f18729610234ee8b562a352">require_option_min_</a> = 0</td></tr>
+<tr class="memdesc:a8d216b892f18729610234ee8b562a352"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum required options (not inheritable!) <br /></td></tr>
+<tr class="separator:a8d216b892f18729610234ee8b562a352"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6881e7aaa336ca90172fb029a314b0b6"><td class="memItemLeft" align="right" valign="top"><a id="a6881e7aaa336ca90172fb029a314b0b6"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a6881e7aaa336ca90172fb029a314b0b6">require_option_max_</a> = 0</td></tr>
+<tr class="memdesc:a6881e7aaa336ca90172fb029a314b0b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max number of options allowed. 0 is unlimited (not inheritable) <br /></td></tr>
+<tr class="separator:a6881e7aaa336ca90172fb029a314b0b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac31738f617c3ce7aaf9fd94c3f54fc0f"><td class="memItemLeft" align="right" valign="top"><a id="ac31738f617c3ce7aaf9fd94c3f54fc0f"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#ac31738f617c3ce7aaf9fd94c3f54fc0f">group_</a> {&quot;Subcommands&quot;}</td></tr>
 <tr class="memdesc:ac31738f617c3ce7aaf9fd94c3f54fc0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The group membership INHERITABLE. <br /></td></tr>
@@ -583,6 +667,12 @@ std::vector&lt; <a class="el" href="class_c_l_i_1_1_option.html">Option</a> * &g
 std::vector&lt; <a class="el" href="class_c_l_i_1_1_app.html">App</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a61eae39a2e5238322d21f6ff31aa6f4b">parsed_subcommands_</a></td></tr>
 <tr class="memdesc:a61eae39a2e5238322d21f6ff31aa6f4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a list of the subcommands collected, in order. <br /></td></tr>
 <tr class="separator:a61eae39a2e5238322d21f6ff31aa6f4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab95644f6cb3babcf2d31b3fea8304a82"><td class="memItemLeft" align="right" valign="top"><a id="ab95644f6cb3babcf2d31b3fea8304a82"></a>
+std::set&lt; <a class="el" href="class_c_l_i_1_1_app.html">App</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#ab95644f6cb3babcf2d31b3fea8304a82">exclude_subcommands_</a></td></tr>
+<tr class="memdesc:ab95644f6cb3babcf2d31b3fea8304a82"><td class="mdescLeft">&#160;</td><td class="mdescRight">this is a list of subcommands that are exclusionary to this one <br /></td></tr>
+<tr class="separator:ab95644f6cb3babcf2d31b3fea8304a82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56990d551dba3360f0f3fb0db10ae510"><td class="memItemLeft" align="right" valign="top">std::set&lt; <a class="el" href="class_c_l_i_1_1_option.html">Option</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a56990d551dba3360f0f3fb0db10ae510">exclude_options_</a></td></tr>
+<tr class="separator:a56990d551dba3360f0f3fb0db10ae510"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b5a085a039cab7e5906b3cd4407fdc8"><td class="memItemLeft" align="right" valign="top"><a id="a6b5a085a039cab7e5906b3cd4407fdc8"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a6b5a085a039cab7e5906b3cd4407fdc8">clear</a> ()</td></tr>
 <tr class="memdesc:a6b5a085a039cab7e5906b3cd4407fdc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the parsed data. <br /></td></tr>
@@ -726,14 +816,19 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a4fc76ed22c4ff32f8c3347c0c76a8bba"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a4fc76ed22c4ff32f8c3347c0c76a8bba">add_complex</a> (std::string option_name, T &amp;variable, std::string option_description=&quot;&quot;, bool defaulted=false, std::string label=&quot;COMPLEX&quot;)</td></tr>
 <tr class="memdesc:a4fc76ed22c4ff32f8c3347c0c76a8bba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a complex number. <br /></td></tr>
 <tr class="separator:a4fc76ed22c4ff32f8c3347c0c76a8bba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc473375a58f5f90295058222f2d1054"><td class="memItemLeft" align="right" valign="top"><a id="adc473375a58f5f90295058222f2d1054"></a>
-<a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#adc473375a58f5f90295058222f2d1054">set_config</a> (std::string option_name=&quot;&quot;, std::string default_filename=&quot;&quot;, std::string help_message=&quot;Read an ini file&quot;, bool required=false)</td></tr>
-<tr class="memdesc:adc473375a58f5f90295058222f2d1054"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a configuration ini file option, or clear it if no name passed. <br /></td></tr>
-<tr class="separator:adc473375a58f5f90295058222f2d1054"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fb588ddc2730ef887b68d3fc61e481a"><td class="memItemLeft" align="right" valign="top"><a id="a3fb588ddc2730ef887b68d3fc61e481a"></a>
+<a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a3fb588ddc2730ef887b68d3fc61e481a">set_config</a> (std::string option_name=&quot;&quot;, std::string default_filename=&quot;&quot;, std::string help_message=&quot;Read an ini file&quot;, bool config_required=false)</td></tr>
+<tr class="memdesc:a3fb588ddc2730ef887b68d3fc61e481a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a configuration ini file option, or clear it if no name passed. <br /></td></tr>
+<tr class="separator:a3fb588ddc2730ef887b68d3fc61e481a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3058b128735eec0813589b56c5453115"><td class="memItemLeft" align="right" valign="top"><a id="a3058b128735eec0813589b56c5453115"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a3058b128735eec0813589b56c5453115">remove_option</a> (<a class="el" href="class_c_l_i_1_1_option.html">Option</a> *opt)</td></tr>
 <tr class="memdesc:a3058b128735eec0813589b56c5453115"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes an option from the <a class="el" href="class_c_l_i_1_1_app.html" title="Creates a command line program, with very few defaults.">App</a>. Takes an option pointer. Returns true if found and removed. <br /></td></tr>
 <tr class="separator:a3058b128735eec0813589b56c5453115"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07322ccc502028693a1cafa101f4fecd"><td class="memTemplParams" colspan="2"><a id="a07322ccc502028693a1cafa101f4fecd"></a>
+template&lt;typename T  = Option_group&gt; </td></tr>
+<tr class="memitem:a07322ccc502028693a1cafa101f4fecd"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_c_l_i_1_1_app.html#a07322ccc502028693a1cafa101f4fecd">add_option_group</a> (std::string group_name, std::string group_description=&quot;&quot;)</td></tr>
+<tr class="memdesc:a07322ccc502028693a1cafa101f4fecd"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates an option group as part of the given app <br /></td></tr>
+<tr class="separator:a07322ccc502028693a1cafa101f4fecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Creates a command line program, with very few defaults. </p>
@@ -992,7 +1087,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </table>
 </div><div class="memdoc">
 <p>Check the options to make sure there are no conflicts.</p>
-<p>Currently checks to see if multiple positionals exist with -1 args </p>
+<p>Currently checks to see if multiple positionals exist with -1 args and checks if the min and max options are feasible </p>
 
 </div>
 </div>
@@ -1460,7 +1555,7 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <p>Add an option, will automatically understand the type for common types.</p>
 <p>To use, create a variable with the expected type, and pass it in after the name. After start is called, you can use count to see if the value was passed, and the value will be initialized properly. Numbers, vectors, and strings are supported.</p>
-<p>-&gt;required(), -&gt;default, and the validators are options, The positional options take an optional number of arguments.</p>
+<p>-&gt;<a class="el" href="class_c_l_i_1_1_app.html#a33c3eb125a4e70d387dd9fc49c25432b" title="Remove the error when extras are left over on the command line.">required()</a>, -&gt;default, and the validators are options, The positional options take an optional number of arguments.</p>
 <p>For example, </p><pre class="fragment">std::string filename;
 program.add_option("filename", filename, "description of filename");
 </pre> 
@@ -2194,6 +2289,32 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="ab736d2d33bb0597d58e535fa4cdaf93e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab736d2d33bb0597d58e535fa4cdaf93e">&#9670;&nbsp;</a></span>count_all()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t CLI::App::count_all </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get a count of all the arguments processed in options and subcommands, this excludes arguments which were treated as extras. </p>
+
+</div>
+</div>
 <a id="aac000657ef11647125ba91af38fd7d9c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aac000657ef11647125ba91af38fd7d9c">&#9670;&nbsp;</a></span>exit()</h2>
 
@@ -2315,7 +2436,7 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get a subcommand pointer list to the currently selected subcommands (after parsing by by default, in command line order; use parsed = false to get the original definition list.) </p>
+<p>Get a subcommand pointer list to the currently selected subcommands (after parsing by default, in command line order; use parsed = false to get the original definition list.) </p>
 
 </div>
 </div>
@@ -2564,6 +2685,70 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="a6003073a5ae4904cb27a978282363e99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6003073a5ae4904cb27a978282363e99">&#9670;&nbsp;</a></span>require_option() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_l_i_1_1_app.html">App</a>* CLI::App::require_option </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Require an option to be given (does not affect help call) The number required can be given. Negative values indicate maximum number allowed (0 for any number). </p>
+
+</div>
+</div>
+<a id="a33f21d3dd734f24fe796923580b6e29f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33f21d3dd734f24fe796923580b6e29f">&#9670;&nbsp;</a></span>require_option() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_l_i_1_1_app.html">App</a>* CLI::App::require_option </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>max</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Explicitly control the number of options required. Setting 0 for the max means unlimited number allowed. Max number inheritable. </p>
+
+</div>
+</div>
 <a id="ae1bb42a7f768d636671552cb345f2d6c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae1bb42a7f768d636671552cb345f2d6c">&#9670;&nbsp;</a></span>require_subcommand() <span class="overload">[1/2]</span></h2>
 
@@ -2650,6 +2835,29 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">{</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">        <span class="keyword">false</span></div><div class="line"></div><div class="line">    }</div></div><!-- fragment -->
 <p>Allow '/' for options for Windows like options. Defaults to true on Windows, false otherwise. INHERITABLE. </p>
+
+</div>
+</div>
+<a id="a56990d551dba3360f0f3fb0db10ae510"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56990d551dba3360f0f3fb0db10ae510">&#9670;&nbsp;</a></span>exclude_options_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::set&lt;<a class="el" href="class_c_l_i_1_1_option.html">Option</a> *&gt; CLI::App::exclude_options_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This is a list of options which are exclusionary to this <a class="el" href="class_c_l_i_1_1_app.html" title="Creates a command line program, with very few defaults.">App</a>, if the options were used this subcommand should not be </p>
 
 </div>
 </div>

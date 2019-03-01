@@ -13,6 +13,7 @@ var searchData=
   ['option',['Option',['../class_c_l_i_1_1_option.html',1,'CLI::Option'],['../class_c_l_i_1_1_option.html#aaef84f95d7d92b87be203fe9bc76d57f',1,'CLI::Option::Option()']]],
   ['option_5fdefaults',['option_defaults',['../class_c_l_i_1_1_app.html#a2aee3915a2e24fc7806e25b9bbc2b37c',1,'CLI::App']]],
   ['option_5fdefaults_5f',['option_defaults_',['../class_c_l_i_1_1_app.html#a34da062f6cc255048384b72e0ec6c276',1,'CLI::App']]],
+  ['option_5fgroup',['Option_group',['../class_c_l_i_1_1_option__group.html',1,'CLI']]],
   ['optionalreadyadded',['OptionAlreadyAdded',['../class_c_l_i_1_1_option_already_added.html',1,'CLI']]],
   ['optionbase',['OptionBase',['../class_c_l_i_1_1_option_base.html',1,'CLI']]],
   ['optionbase_3c_20option_20_3e',['OptionBase&lt; Option &gt;',['../class_c_l_i_1_1_option_base.html',1,'CLI']]],
